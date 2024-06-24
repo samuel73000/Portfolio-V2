@@ -1,4 +1,4 @@
-import "../app/styles/home.css";
+import "../../src/styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Image from "next/image";
 import nuageClaire from "../../public/asset/nuageClaire.png";

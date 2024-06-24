@@ -15,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={inter.className}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="../../public/asset/favicon-16x16.png" />
+      </head>
+      <body>
         <Header /> 
         {children}
       </body>

@@ -1,4 +1,4 @@
-import "../styles/header.css"
+import "../../styles/header.css"
 import Image from 'next/image';
 import soleil from "../../../public/asset/external-sun-lighting-flaticons-flat-flat-icons.png"
 export default function Header() {
@@ -11,8 +11,6 @@ export default function Header() {
                 <a href="#skills">Service</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
-            
-            
         </nav>
         <Image src={soleil} alt="sun" className="header-img-darkmode" />
     </header>
