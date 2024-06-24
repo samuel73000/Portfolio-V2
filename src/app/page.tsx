@@ -6,6 +6,15 @@ import geek from "../../public/asset/geek.svg";
 import linkedin from "../../public/asset/linkedin--v2.png";
 import github from "../../public/asset/github--v1.png";
 import react from "../../public/asset/tech/react-original-wordmark.svg";
+import redux from "../../public/asset/tech/redux-original.svg";
+import js from "../../public/asset/tech/javascript-original.svg";
+import ts from "../../public/asset/tech/typescript-original.svg";
+import html from "../../public/asset/tech/html5-original.svg";
+import css from "../../public/asset/tech/css3-plain.svg";
+import sass from "../../public/asset/tech/sass-original.svg";
+import bootstrap from "../../public/asset/tech/bootstrap-plain.svg";
+import git from "../../public/asset/tech/git-plain.svg";
+import mongodb from "../../public/asset/tech/mongodb-plain.svg";
 export default function Home() {
   return (
     <main>
@@ -59,6 +68,52 @@ export default function Home() {
   <Image src={react} alt="logo react" className="image-tech-about"/>
   <p className="text-tech-about">React</p>
 </article>
+
+<article className="article-tech-about">
+  <Image src={redux} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">Redux</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={js} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">JavaScript</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={ts} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">TypeScript</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={html} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">Html</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={css} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">Css</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={sass} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">Sass</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={bootstrap} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">BootStrap</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={git} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">Git</p>
+</article>
+
+<article className="article-tech-about">
+  <Image src={mongodb} alt="logo react" className="image-tech-about"/>
+  <p className="text-tech-about">Mongo DB</p>
+</article>
+
 
 </div>
       </section>
