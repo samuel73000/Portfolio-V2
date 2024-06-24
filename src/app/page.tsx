@@ -19,15 +19,40 @@ import mongodb from "../../public/asset/tech/mongodb-plain.svg";
 import nextjs from "../../public/asset/tech/nextjs-icon-512x512-y563b8iq.png";
 import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
 import jest from "../../public/asset/tech/jest.svg";
+import serviceLogo from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 export default function Home() {
-
-
-
-
-
-    const techSrc = [react, redux, nextjs, vite, js, ts, html, css, sass, bootstrap, tailwind, git, mongodb, jest];
-  const nameTech = ["React", "Redux", "NextJs", "ViteJs", "JavaScript", "TypeScript", "Html", "Css", "Sass", "BootStrap", "Tailwind", "Git", "Mongo DB", "Jest"];
-
+  const techSrc = [
+    react,
+    redux,
+    nextjs,
+    vite,
+    js,
+    ts,
+    html,
+    css,
+    sass,
+    bootstrap,
+    tailwind,
+    git,
+    mongodb,
+    jest,
+  ];
+  const nameTech = [
+    "React",
+    "Redux",
+    "NextJs",
+    "ViteJs",
+    "JavaScript",
+    "TypeScript",
+    "Html",
+    "Css",
+    "Sass",
+    "BootStrap",
+    "Tailwind",
+    "Git",
+    "Mongo DB",
+    "Jest",
+  ];
 
   return (
     <main>
@@ -67,23 +92,50 @@ export default function Home() {
         </div>
       </section>
       <section className="about-me">
-<h2 className="titre-about">About Me</h2>
-<article className="article-about">
-  <h3 className="titre-article-about">A bit about me</h3>
-  <p className="text-article-about">I'm a self-taught web developer and Mobile App Developer with experience in designing new features from ideation to production, implementation of wireframes and design flows into high performance software applications. I take into consideration the user experience while writing reusable and efficient code. I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release.Currently, I'm focused on the backend development.</p>
-</article>
-<article className="article-about">
-  <h3 className="titre-article-about">Technologies and Tools</h3>
-  <p className="text-article-about">Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.</p>
-</article>
-<div className="tech-about">
-{techSrc.map((tech, index) => (
-          <article key={index} className="article-tech-about">
-            <Image src={tech} alt={`logo ${nameTech[index]}`} className="image-tech-about" />
-            <p className="text-tech-about">{nameTech[index]}</p>
-          </article>
-        ))}
-</div>
+        <h2 className="titre-about">About Me</h2>
+        <article className="article-about">
+          <h3 className="titre-article-about">A bit about me</h3>
+          <p className="text-article-about">
+            I'm a self-taught web developer and Mobile App Developer with
+            experience in designing new features from ideation to production,
+            implementation of wireframes and design flows into high performance
+            software applications. I take into consideration the user experience
+            while writing reusable and efficient code. I passionately combine
+            good design, technology, and innovation in all my projects, which I
+            like to accompany from the first idea to release.Currently, I'm
+            focused on the backend development.
+          </p>
+        </article>
+        <article className="article-about">
+          <h3 className="titre-article-about">Technologies and Tools</h3>
+          <p className="text-article-about">
+            Using a combination of cutting-edge technologies and reliable
+            open-source software I build user-focused, performant apps and
+            websites for smartphones, tablets, and desktops.
+          </p>
+        </article>
+        <div className="tech-about">
+          {techSrc.map((tech, index) => (
+            <article key={index} className="article-tech-about">
+              <Image
+                src={tech}
+                alt={`logo ${nameTech[index]}`}
+                className="image-tech-about"
+              />
+              <p className="text-tech-about">{nameTech[index]}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="service">
+        <h2 className="titre-about">Services</h2>
+        <h3 className="titre-article-about">What I Provide</h3>
+        <article className="article-service">
+         <Image src={serviceLogo} alt="service logo" className=""/>
+         <h4>Web Application Development</h4>
+         <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design user interface design authoring, including standardised code and proprietary software user experience design and search engine</p>
+
+        </article>
       </section>
     </main>
   );
