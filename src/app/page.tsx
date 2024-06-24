@@ -171,11 +171,12 @@ export default function Home() {
         </div>
       </section>
       {/* **********************project********************************** */}
+<section className="projects">
+<h2 className="titre-about">Projects</h2>
+<h3 className="titre-article-about">What I Built</h3>
 
 
-
-
-
+</section>
     </main>
   );
 }
