@@ -13,9 +13,22 @@ import html from "../../public/asset/tech/html5-original.svg";
 import css from "../../public/asset/tech/css3-plain.svg";
 import sass from "../../public/asset/tech/sass-original.svg";
 import bootstrap from "../../public/asset/tech/bootstrap-plain.svg";
+import tailwind from "../../public/asset/tech/tailwind.svg";
 import git from "../../public/asset/tech/git-plain.svg";
 import mongodb from "../../public/asset/tech/mongodb-plain.svg";
+import nextjs from "../../public/asset/tech/nextjs-icon-512x512-y563b8iq.png";
+import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
+import jest from "../../public/asset/tech/jest.svg";
 export default function Home() {
+
+
+
+
+
+    const techSrc = [react, redux, nextjs, vite, js, ts, html, css, sass, bootstrap, tailwind, git, mongodb, jest];
+  const nameTech = ["React", "Redux", "NextJs", "ViteJs", "JavaScript", "TypeScript", "Html", "Css", "Sass", "BootStrap", "Tailwind", "Git", "Mongo DB", "Jest"];
+
+
   return (
     <main>
       <section className="head">
@@ -64,57 +77,12 @@ export default function Home() {
   <p className="text-article-about">Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.</p>
 </article>
 <div className="tech-about">
-<article className="article-tech-about">
-  <Image src={react} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">React</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={redux} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">Redux</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={js} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">JavaScript</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={ts} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">TypeScript</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={html} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">Html</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={css} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">Css</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={sass} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">Sass</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={bootstrap} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">BootStrap</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={git} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">Git</p>
-</article>
-
-<article className="article-tech-about">
-  <Image src={mongodb} alt="logo react" className="image-tech-about"/>
-  <p className="text-tech-about">Mongo DB</p>
-</article>
-
-
+{techSrc.map((tech, index) => (
+          <article key={index} className="article-tech-about">
+            <Image src={tech} alt={`logo ${nameTech[index]}`} className="image-tech-about" />
+            <p className="text-tech-about">{nameTech[index]}</p>
+          </article>
+        ))}
 </div>
       </section>
     </main>

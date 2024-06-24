@@ -112,6 +112,8 @@
 .tech-about{
 display: flex;
 flex-wrap: wrap;
+gap: 2.5rem;
+margin-top: 50px;
 }
 .article-tech-about{
 width: 9rem;
@@ -123,6 +125,7 @@ border-radius: 0.5rem ;
 text-align: start;
 align-items: center; 
 padding: 5px 10px 5px 10px;
+cursor: pointer;
 }
 .image-tech-about{
     width: 3rem;
