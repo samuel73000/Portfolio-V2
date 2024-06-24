@@ -19,7 +19,8 @@ import mongodb from "../../public/asset/tech/mongodb-plain.svg";
 import nextjs from "../../public/asset/tech/nextjs-icon-512x512-y563b8iq.png";
 import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
 import jest from "../../public/asset/tech/jest.svg";
-import serviceLogo from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
+import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
+import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 export default function Home() {
   const techSrc = [
     react,
@@ -56,6 +57,7 @@ export default function Home() {
 
   return (
     <main>
+      {/* *********************head*************************** */}
       <section className="head">
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
         <Image src={geek} alt="un geek qui dev" className="img-dev" />
@@ -91,6 +93,7 @@ export default function Home() {
           <button className="btn-head">Resume</button>
         </div>
       </section>
+      {/* **********************about me******************** */}
       <section className="about-me">
         <h2 className="titre-about">About Me</h2>
         <article className="article-about">
@@ -127,16 +130,52 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* **********************service******************** */}
       <section className="service">
         <h2 className="titre-about">Services</h2>
         <h3 className="titre-article-about">What I Provide</h3>
-        <article className="article-service">
-         <Image src={serviceLogo} alt="service logo" className=""/>
-         <h4>Web Application Development</h4>
-         <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design user interface design authoring, including standardised code and proprietary software user experience design and search engine</p>
-
-        </article>
+        <div className="container-article-service">
+          <article className="article-service">
+            <Image
+              src={serviceLogoFront}
+              alt="service logo"
+              className="img-service"
+            />
+            <h4 className="title-article-service">
+              Web Application Development
+            </h4>
+            <p className="text-artcile-service">
+              Web design encompasses many different skills and disciplines in
+              the production and maintenance of websites. The different areas of
+              web design include web graphic design user interface design
+              authoring, including standardised code and proprietary software
+              user experience design and search engine
+            </p>
+          </article>
+          <article className="article-service">
+            <Image
+              src={serviceLogoBack}
+              alt="service logo"
+              className="img-service"
+            />
+            <h4 className="title-article-service">Backend Development</h4>
+            <p className="text-artcile-service">
+              Graphic design is a craft where professionals create visual
+              content to communicate messages. By applying visual hierarchy and
+              page layout techniques, designers use typography and pictures to
+              meet users' specific needs and focus on the logic of displaying
+              elements in interactive designs, to optimize the user experience.
+            </p>
+          </article>
+        </div>
       </section>
+      {/* **********************project********************************** */}
+
+
+
+
+
     </main>
   );
 }
