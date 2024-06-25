@@ -2,7 +2,7 @@ import "../styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Image from "next/image";
 import Projects from "./_composant/project";
-import Contact from "./contact";
+import Contact from "./_composant/contact";
 import nuageClaire from "../../public/asset/nuageClaire.png";
 import geek from "../../public/asset/geek.svg";
 import linkedin from "../../public/asset/linkedin--v2.png";
@@ -23,8 +23,6 @@ import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
 import jest from "../../public/asset/tech/jest.svg";
 import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
-
-
 
 export default function Home() {
   const techSrc = [
@@ -59,9 +57,6 @@ export default function Home() {
     "Mongo DB",
     "Jest",
   ];
-
- 
-  
 
   return (
     <main>
@@ -216,11 +211,33 @@ export default function Home() {
         </div>
       </section>
       {/* **********************contacte********************************** */}
-      <section>
-<Contact/>
-
-  
-
+      <section className="contact">
+        <h2 className="titre-about">Contact</h2>
+        <h3 className="titre-article-about">Connect with me</h3>
+        <p className="text-titre-contact">
+          If you want to know more about me or my work, or if you would just
+          like to say hello, send me a message. I'd love to hear from you.
+        </p>
+        <section className="container-contact-all">
+          <article className="container-form">
+            <Contact />
+          </article>
+          <article>
+            <h3 className="titre-info-contact">email</h3>
+            <p className="text-info-contact">thosam73000@gmail.com</p>
+            <h3 className="titre-info-contact">adress</h3>
+            <p className="text-info-contact">101 avenue d'annecy, Lyon, France</p>
+            <h3 className="titre-info-contact">social</h3>
+            <div className="social-info-contact">
+              <a href="#">
+                <Image src={linkedin} alt="logo linkedin" />
+              </a>
+              <a href="#">
+                <Image src={github} alt="logo github" />
+              </a>
+            </div>
+          </article>
+        </section>
       </section>
     </main>
   );
