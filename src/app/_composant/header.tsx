@@ -7,10 +7,10 @@ import nuageClaire from "../../../public/asset/nuageClaire.png";
 import nuageSombre from "../../../public/asset/nuageDark.png";
 
 export default function Header() {
-  // Utilisation de useState pour gérer l'état de l'image
-  const [currentImageLune, setCurrentImageLune] = useState(soleil.src); // Image par défaut
+  const [currentImageLune, setCurrentImageLune] = useState(soleil.src);
+  const sections = ["home", "about", "service", "projects", "contact"];
+  const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
-  // Fonction pour ajouter des classes et des attributs pour le mode sombre
   const applyDarkMode = () => {
     document.querySelector(".header-container")?.classList.add("header-dark");
     document.querySelector(".titre-header")?.classList.add("titre-header-dark");
@@ -37,7 +37,6 @@ export default function Header() {
     document.querySelector(".copyright")?.classList.add("titre-header-dark");
   };
 
-  // Fonction pour supprimer des classes et des attributs pour le mode clair
   const removeDarkMode = () => {
     document.querySelector(".header-container")?.classList.remove("header-dark");
     document.querySelector(".titre-header")?.classList.remove("titre-header-dark");
@@ -64,7 +63,6 @@ export default function Header() {
     document.querySelector(".copyright")?.classList.remove("titre-header-dark");
   };
 
-  // Fonction pour changer l'image lors du clic
   const toggleImage = () => {
     const newImageLune = currentImageLune === soleil.src ? lune.src : soleil.src;
     setCurrentImageLune(newImageLune);
@@ -76,11 +74,7 @@ export default function Header() {
     }
   };
 
-  const navRef = useRef<NodeListOf<HTMLAnchorElement> | null>(null);
-
   useEffect(() => {
-    navRef.current = document.querySelectorAll('a.nav-header-a');
-
     const handleClick = (e: MouseEvent) => {
       e.preventDefault();
       const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href')?.substring(1);
@@ -108,13 +102,45 @@ export default function Header() {
       }
     };
 
-    navRef.current?.forEach(anchor => {
-      anchor.addEventListener('click', handleClick);
+    navRefs.current.forEach(anchor => {
+      anchor?.addEventListener('click', handleClick);
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute("id");
+        const navItem = document.querySelector(`a[href="#${id}"]`);
+        if (entry.isIntersecting) {
+          navItem?.classList.add("active-a");
+        } else {
+          navItem?.classList.remove("active-a");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observer.observe(section);
+      }
     });
 
     return () => {
-      navRef.current?.forEach(anchor => {
-        anchor.removeEventListener('click', handleClick);
+      navRefs.current.forEach(anchor => {
+        anchor?.removeEventListener('click', handleClick);
+      });
+      sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          observer.unobserve(section);
+        }
       });
     };
   }, []);
@@ -123,11 +149,18 @@ export default function Header() {
     <header className="header-container">
       <h1 className="titre-header">Samuel.P</h1>
       <nav className="nav-header">
-        <a href="#home" className="nav-header-a">Home</a>
-        <a href="#about" className="nav-header-a">About</a>
-        <a href="#service" className="nav-header-a">Service</a>
-        <a href="#projects" className="nav-header-a">Projects</a>
-        <a href="#contact" className="nav-header-a">Contact</a>
+        {sections.map((section, index) => (
+          <a
+            key={section}
+            href={`#${section}`}
+            className="nav-header-a"
+            ref={el => {
+              navRefs.current[index] = el;
+            }}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </a>
+        ))}
       </nav>
       <img
         src={currentImageLune}
