@@ -183,3 +183,17 @@ text-align: center;
   flex-wrap: wrap;
   gap: 5%;
 }
+.container-btn-projects{
+  display: flex;
+  justify-content: center;
+}
+.btn-projects-show{
+  margin-top: 15px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 30px 10px 30px ;
+  font-size: 14px;
+  font-weight: 700;
+}

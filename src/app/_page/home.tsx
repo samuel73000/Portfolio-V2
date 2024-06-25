@@ -204,6 +204,9 @@ export default function Home() {
             texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           />
         </div>
+        <div className="container-btn-projects">
+        <button className="btn-projects-show">Show More</button>
+        </div>
       </section>
     </main>
   );
