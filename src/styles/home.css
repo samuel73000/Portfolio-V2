@@ -261,9 +261,11 @@
 
 
 /* ////////////////////////// animation ////////////////////////// */
+/* aniamtion des btn */
 button:hover {
   background-color: #4669ca;
 }
+/* animation des logo des reseaux */
 .logo-github , .logo-linkedin  {
   padding-right: 2px;
   transition: transform 0.3s ease;
@@ -272,4 +274,28 @@ button:hover {
   transform: scale(1.1);
 }
 
+/* animation img de geek */
+.animate-geek {
+  animation-name: fade-in-slide-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
 
+@keyframes fade-in-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

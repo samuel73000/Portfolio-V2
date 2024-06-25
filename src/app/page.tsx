@@ -1,5 +1,7 @@
+"use client";
 import "../styles/Home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Projects from "./_composant/project";
 import Contact from "./_composant/contact";
@@ -26,6 +28,49 @@ import serviceLogoFront from "../../public/asset/external-web-development-coding
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 
 export default function Home()  {
+
+
+
+
+
+
+
+
+
+  const geekImageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+
+    const callback: IntersectionObserverCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-geek");
+        } else {
+          entry.target.classList.remove("animate-geek");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    if (geekImageRef.current) {
+      observer.observe(geekImageRef.current);
+    }
+
+    return () => {
+      if (geekImageRef.current) {
+        observer.unobserve(geekImageRef.current);
+      }
+    };
+  }, []);
+
+
+
 
 
   const techSrc = [
@@ -66,7 +111,7 @@ export default function Home()  {
       {/* *********************head*************************** */}
       <section className="head" id="home" >
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
-        <Image src={geek} alt="un geek qui dev" className="img-dev"   />
+        <Image src={geek} alt="un geek qui dev" className="img-dev" ref={geekImageRef} />
         <div>
           <h2 className="titre-head">Hi, I am Samuel </h2>
           <div className="typeWriter">
