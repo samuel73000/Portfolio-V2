@@ -65,7 +65,7 @@
   left: 10%;
   width: 40%;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 .btn-head {
   position: absolute;
@@ -242,4 +242,19 @@
   gap: 15px;
   justify-content: end;
 }
+/* ////////////////////////// footer ////////////////////////// */
 
+
+
+
+/* ////////////////////////// animation ////////////////////////// */
+button:hover {
+  background-color: #4669ca;
+}
+.logo-github , .logo-linkedin  {
+  padding-right: 2px;
+  transition: transform 0.3s ease;
+}
+.logo-github:hover , .logo-linkedin:hover  {
+  transform: scale(1.1);
+}

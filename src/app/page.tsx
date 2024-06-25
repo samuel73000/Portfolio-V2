@@ -88,10 +88,10 @@ export default function Home() {
           </p>
           <div className="container-reseaux-head">
             <a href="#">
-              <Image src={linkedin} alt="logo linkedin" />
+              <Image src={linkedin} alt="logo linkedin" className="logo-linkedin" />
             </a>
             <a href="#">
-              <Image src={github} alt="logo github" />
+              <Image src={github} alt="logo github" className="logo-github" />
             </a>
           </div>
           <button className="btn-head">Resume</button>
@@ -231,19 +231,19 @@ export default function Home() {
             <h3 className="titre-info-contact">social</h3>
             <div className="social-info-contact">
               <a href="#">
-                <Image src={linkedin} alt="logo linkedin" />
+                <Image src={linkedin} alt="logo linkedin" className="logo-linkedin"  />
               </a>
               <a href="#">
-                <Image src={github} alt="logo github" />
+                <Image src={github} alt="logo github" className="logo-github"  />
               </a>
             </div>
           </article>
         </section>
       </section>
       {/* **********************footer********************************** */}
-<section className="footer">
+
 <Footer  />
-</section>
+
     </main>
   );
 }
