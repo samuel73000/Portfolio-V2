@@ -210,26 +210,48 @@ export default function Home() {
       </section>
       {/* **********************contacte********************************** */}
       <section>
-      <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+      <form name="contact" method="post" className="form-contact">
+          <input type="hidden" name="form-name" value="contact" />
+
+          <label for="name" className="label-contact">
+          {("Contact.name")}
+          </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder={("Contact.holdername")}
+            className="input-contact"
+          />
+
+          <label for="email" className="label-contact">
+          {("Contact.email")}
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder={("Contact.holderemail")}
+            className="input-contact"
+          />
+
+          <label for="message" className="label-contact">
+          {("Contact.message")}
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder={("Contact.holdermessage")}
+            className="textarea-contact"
+          ></textarea>
+
+          <div class="button-container-1 btn-contact">
+            <span class="mas">{("Contact.envoyer")}</span>
+            <button id="work" type="submit" name="Hover">
+            {("Contact.envoyer")}
+            </button>
+          </div>
+        </form>
       </section>
     </main>
   );
