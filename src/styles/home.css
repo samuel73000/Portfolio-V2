@@ -203,6 +203,7 @@
 .contact {
   padding-left: 15%;
   padding-right: 15%;
+  padding-bottom: 7%;
   margin-top: 50px;
   background-color: #f3f4f6;
 }
@@ -211,33 +212,34 @@
   font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    width: 50%;
-}
-.container-contact-all{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-.container-form{
   width: 50%;
 }
-.titre-info-contact{
+.container-contact-all {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.container-form {
+  width: 50%;
+}
+.titre-info-contact {
   font-size: 30px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    text-align:end;
+  text-align: end;
 }
-.text-info-contact{
+.text-info-contact {
   color: #1d4ed8;
   font-size: 17px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-weight: 800;
-    text-align:end;
-    margin-bottom: 20px;
+  font-weight: 800;
+  text-align: end;
+  margin-bottom: 20px;
 }
-.social-info-contact{
+.social-info-contact {
   display: flex;
   gap: 15px;
   justify-content: end;
 }
+

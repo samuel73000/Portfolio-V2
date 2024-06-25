@@ -1,0 +1,10 @@
+footer{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 6%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}

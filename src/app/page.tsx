@@ -3,6 +3,7 @@ import { Typewriter } from "nextjs-simple-typewriter";
 import Image from "next/image";
 import Projects from "./_composant/project";
 import Contact from "./_composant/contact";
+import Footer from "./_composant/footer";
 import nuageClaire from "../../public/asset/nuageClaire.png";
 import geek from "../../public/asset/geek.svg";
 import linkedin from "../../public/asset/linkedin--v2.png";
@@ -239,6 +240,10 @@ export default function Home() {
           </article>
         </section>
       </section>
+      {/* **********************footer********************************** */}
+<section className="footer">
+<Footer  />
+</section>
     </main>
   );
 }
