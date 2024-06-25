@@ -213,7 +213,7 @@ export default function Home() {
       <form name="contact" method="post" className="form-contact">
           <input type="hidden" name="form-name" value="contact" />
 
-          <label for="name" className="label-contact">
+          <label  className="label-contact">
           {("Contact.name")}
           </label>
           <input
@@ -224,7 +224,7 @@ export default function Home() {
             className="input-contact"
           />
 
-          <label for="email" className="label-contact">
+          <label  className="label-contact">
           {("Contact.email")}
           </label>
           <input
@@ -235,7 +235,7 @@ export default function Home() {
             className="input-contact"
           />
 
-          <label for="message" className="label-contact">
+          <label  className="label-contact">
           {("Contact.message")}
           </label>
           <textarea
@@ -245,10 +245,10 @@ export default function Home() {
             className="textarea-contact"
           ></textarea>
 
-          <div class="button-container-1 btn-contact">
-            <span class="mas">{("Contact.envoyer")}</span>
+          <div className="button-container-1 btn-contact">
+            
             <button id="work" type="submit" name="Hover">
-            {("Contact.envoyer")}
+            send
             </button>
           </div>
         </form>
