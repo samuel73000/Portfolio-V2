@@ -64,7 +64,7 @@ export default function Home()  {
   return (
     <main>
       {/* *********************head*************************** */}
-      <section className="head" >
+      <section className="head" id="home" >
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
         <Image src={geek} alt="un geek qui dev" className="img-dev"   />
         <div>
@@ -100,7 +100,7 @@ export default function Home()  {
         </div>
       </section>
       {/* **********************about me******************** */}
-      <section className="about-me">
+      <section className="about-me" id="about">
         <h2 className="titre-about">About Me</h2>
         <article className="article-about">
           <h3 className="titre-article-about">A bit about me</h3>
@@ -138,7 +138,7 @@ export default function Home()  {
       </section>
 
       {/* **********************service******************** */}
-      <section className="service">
+      <section className="service" id="service">
         <h2 className="titre-about">Services</h2>
         <h3 className="titre-article-about">What I Provide</h3>
         <div className="container-article-service">
@@ -177,7 +177,7 @@ export default function Home()  {
         </div>
       </section>
       {/* **********************project********************************** */}
-      <section className="projects">
+      <section className="projects" id="projects">
         <h2 className="titre-about">Projects</h2>
         <h3 className="titre-article-about">What I Built</h3>
         <div className="container-projects">
@@ -214,7 +214,7 @@ export default function Home()  {
         </div>
       </section>
       {/* **********************contacte********************************** */}
-      <section className="contact">
+      <section className="contact" id="contact">
         <h2 className="titre-about">Contact</h2>
         <h3 className="titre-article-about">Connect with me</h3>
         <p className="text-titre-contact">
