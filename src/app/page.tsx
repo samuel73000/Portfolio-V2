@@ -28,10 +28,6 @@ import serviceLogoBack from "../../public/asset/external-backend-no-code-flatico
 export default function Home()  {
 
 
-
-
-
-  
   const techSrc = [
     react,
     redux,
