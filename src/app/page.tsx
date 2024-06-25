@@ -2,7 +2,7 @@ import "../styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Image from "next/image";
 import Projects from "./_composant/project";
-import Contact from "./_composant/contact";
+import Contact from "./contact";
 import nuageClaire from "../../public/asset/nuageClaire.png";
 import geek from "../../public/asset/geek.svg";
 import linkedin from "../../public/asset/linkedin--v2.png";
