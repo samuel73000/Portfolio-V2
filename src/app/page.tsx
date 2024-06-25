@@ -22,6 +22,28 @@ import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
 import jest from "../../public/asset/tech/jest.svg";
 import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
+
+
+
+
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  const myForm = event.currentTarget;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData as any).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
+
+
+
+
 export default function Home() {
   const techSrc = [
     react,
@@ -55,6 +77,9 @@ export default function Home() {
     "Mongo DB",
     "Jest",
   ];
+
+ 
+  
 
   return (
     <main>
@@ -210,48 +235,30 @@ export default function Home() {
       </section>
       {/* **********************contacte********************************** */}
       <section>
-      <form name="contact" method="post" className="form-contact">
-          <input type="hidden" name="form-name" value="contact" />
 
-          <label  className="label-contact">
-          {("Contact.name")}
-          </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder={("Contact.holdername")}
-            className="input-contact"
-          />
 
-          <label  className="label-contact">
-          {("Contact.email")}
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder={("Contact.holderemail")}
-            className="input-contact"
-          />
+      <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
 
-          <label  className="label-contact">
-          {("Contact.message")}
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder={("Contact.holdermessage")}
-            className="textarea-contact"
-          ></textarea>
 
-          <div className="button-container-1 btn-contact">
-            
-            <button id="work" type="submit" name="Hover">
-            send
-            </button>
-          </div>
-        </form>
       </section>
     </main>
   );
