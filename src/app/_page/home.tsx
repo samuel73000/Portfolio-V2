@@ -1,26 +1,27 @@
-import "../../src/styles/home.css";
+import "../../styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Image from "next/image";
-import nuageClaire from "../../public/asset/nuageClaire.png";
-import geek from "../../public/asset/geek.svg";
-import linkedin from "../../public/asset/linkedin--v2.png";
-import github from "../../public/asset/github--v1.png";
-import react from "../../public/asset/tech/react-original-wordmark.svg";
-import redux from "../../public/asset/tech/redux-original.svg";
-import js from "../../public/asset/tech/javascript-original.svg";
-import ts from "../../public/asset/tech/typescript-original.svg";
-import html from "../../public/asset/tech/html5-original.svg";
-import css from "../../public/asset/tech/css3-plain.svg";
-import sass from "../../public/asset/tech/sass-original.svg";
-import bootstrap from "../../public/asset/tech/bootstrap-plain.svg";
-import tailwind from "../../public/asset/tech/tailwind.svg";
-import git from "../../public/asset/tech/git-plain.svg";
-import mongodb from "../../public/asset/tech/mongodb-plain.svg";
-import nextjs from "../../public/asset/tech/nextjs-icon-512x512-y563b8iq.png";
-import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
-import jest from "../../public/asset/tech/jest.svg";
-import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
-import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
+import Projects from "../../app/_composant/project";
+import nuageClaire from "../../../public/asset/nuageClaire.png";
+import geek from "../../../public/asset/geek.svg";
+import linkedin from "../../../public/asset/linkedin--v2.png";
+import github from "../../../public/asset/github--v1.png";
+import react from "../../../public/asset/tech/react-original-wordmark.svg";
+import redux from "../../../public/asset/tech/redux-original.svg";
+import js from "../../../public/asset/tech/javascript-original.svg";
+import ts from "../../../public/asset/tech/typescript-original.svg";
+import html from "../../../public/asset/tech/html5-original.svg";
+import css from "../../../public/asset/tech/css3-plain.svg";
+import sass from "../../../public/asset/tech/sass-original.svg";
+import bootstrap from "../../../public/asset/tech/bootstrap-plain.svg";
+import tailwind from "../../../public/asset/tech/tailwind.svg";
+import git from "../../../public/asset/tech/git-plain.svg";
+import mongodb from "../../../public/asset/tech/mongodb-plain.svg";
+import nextjs from "../../../public/asset/tech/nextjs-icon-512x512-y563b8iq.png";
+import vite from "../../../public/asset/tech/Vitejs-logo.svg.png";
+import jest from "../../../public/asset/tech/jest.svg";
+import serviceLogoFront from "../../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
+import serviceLogoBack from "../../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 export default function Home() {
   const techSrc = [
     react,
@@ -171,12 +172,17 @@ export default function Home() {
         </div>
       </section>
       {/* **********************project********************************** */}
-<section className="projects">
-<h2 className="titre-about">Projects</h2>
-<h3 className="titre-article-about">What I Built</h3>
+      <section className="projects">
+        <h2 className="titre-about">Projects</h2>
+        <h3 className="titre-article-about">What I Built</h3>
 
-
-</section>
+        <Projects
+          src=""
+          alt="fsd"
+          titre="Noteworthy technology acquisitions 2021"
+          texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+        />
+      </section>
     </main>
   );
 }
