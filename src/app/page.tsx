@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles/Home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Image from "next/image";
 import Projects from "./_composant/project";
@@ -25,7 +25,13 @@ import jest from "../../public/asset/tech/jest.svg";
 import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 
-export default function Home() {
+export default function Home()  {
+
+
+
+
+
+  
   const techSrc = [
     react,
     redux,
@@ -62,9 +68,9 @@ export default function Home() {
   return (
     <main>
       {/* *********************head*************************** */}
-      <section className="head">
+      <section className="head" >
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
-        <Image src={geek} alt="un geek qui dev" className="img-dev" />
+        <Image src={geek} alt="un geek qui dev" className="img-dev"   />
         <div>
           <h2 className="titre-head">Hi, I am Samuel </h2>
           <div className="typeWriter">
@@ -246,4 +252,5 @@ export default function Home() {
 
     </main>
   );
-}
+   
+  }

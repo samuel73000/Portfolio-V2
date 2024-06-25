@@ -26,6 +26,9 @@
   width: 35%;
   height: auto;
 }
+
+
+
 .titre-head {
   position: absolute;
   z-index: 1;
@@ -258,3 +261,5 @@ button:hover {
 .logo-github:hover , .logo-linkedin:hover  {
   transform: scale(1.1);
 }
+
+
