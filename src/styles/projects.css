@@ -1,0 +1,38 @@
+.section-projects{
+    width: 45%;
+    height: auto;
+    margin-bottom: 5%;
+}
+.img-projets{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+}
+.container-texte-projects{
+background-color:#1f2937;
+margin-top: -10px;
+padding: 20px;
+z-index: 1;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.titre-projects{
+font-size: 24px;
+color: white;
+}
+.texte-projects{
+margin-top: 5px;
+font-size: 16px;
+color: #9ca3af;
+}
+.btn-projects{
+    margin-top: 15px;
+background-color: #3b82f6;
+color: white;
+border-radius: 8px;
+border: none;
+padding: 10px 15px 10px 15px ;
+font-size: 14px;
+font-weight: 700;
+}

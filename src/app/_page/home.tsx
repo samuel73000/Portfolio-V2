@@ -175,13 +175,35 @@ export default function Home() {
       <section className="projects">
         <h2 className="titre-about">Projects</h2>
         <h3 className="titre-article-about">What I Built</h3>
+        <div className="container-projects">
+          <Projects
+            src={nuageClaire}
+            alt="fsd"
+            titre="Noteworthy technology acquisitions 2021"
+            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          />
 
-        <Projects
-          src=""
-          alt="fsd"
-          titre="Noteworthy technology acquisitions 2021"
-          texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-        />
+          <Projects
+            src={nuageClaire}
+            alt="fsd"
+            titre="Noteworthy technology acquisitions 2021"
+            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          />
+
+          <Projects
+            src={nuageClaire}
+            alt="fsd"
+            titre="Noteworthy technology acquisitions 2021"
+            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          />
+
+          <Projects
+            src={nuageClaire}
+            alt="fsd"
+            titre="Noteworthy technology acquisitions 2021"
+            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          />
+        </div>
       </section>
     </main>
   );

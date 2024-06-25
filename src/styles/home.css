@@ -177,3 +177,9 @@ text-align: center;
     padding-left: 15%;
     padding-right: 15%;
 }
+.container-projects{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
