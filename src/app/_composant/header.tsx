@@ -27,10 +27,56 @@ export default function Header() {
       document.querySelector(".text-head")?.classList.add("titre-header-dark");
 // about
       document.querySelector(".about-me")?.classList.add("about-me-dark");
-      document.querySelector(".titre-about")?.classList.add("titre-header-dark");
+      document.querySelectorAll(".titre-about")[0]?.classList.add("titre-header-dark");
+      document.querySelectorAll(".titre-about")[1]?.classList.add("titre-header-dark");
+      document.querySelectorAll(".titre-about")[2]?.classList.add("titre-header-dark");
+      document.querySelectorAll(".titre-about")[3]?.classList.add("titre-header-dark");
       document.querySelectorAll(".text-article-about")[0]?.classList.add("titre-header-dark");
       document.querySelectorAll(".text-article-about")[1]?.classList.add("titre-header-dark");
-
+// service
+      document.querySelector(".service")?.classList.add("service-dark");
+//projects
+      document.querySelector(".projects")?.classList.add("about-me-dark");
+//contact
+      document.querySelector(".contact")?.classList.add("service-dark");
+      document.querySelectorAll(".titre-info-contact")[0]?.classList.add("titre-header-dark");
+      document.querySelectorAll(".titre-info-contact")[1]?.classList.add("titre-header-dark");
+      document.querySelectorAll(".titre-info-contact")[2]?.classList.add("titre-header-dark");
+ //footer
+      document.querySelector(".footer")?.classList.add("header-dark");
+      document.querySelector(".copyright")?.classList.add("titre-header-dark");
+    }if (currentImageLune === lune.src) {
+     // header
+     document.querySelector(".header-container")?.classList.remove("header-dark");
+     document.querySelector(".titre-header")?.classList.remove("titre-header-dark");
+     const navheader = document.querySelectorAll(".nav-header-a");
+     navheader.forEach(navHeader => {
+       navHeader.classList.remove("titre-header-dark");
+     });
+// head
+document.querySelector(".img-nuage")?.setAttribute("srcset", nuageClaire.src);
+document.querySelector(".titre-head")?.classList.remove("titre-header-dark");
+document.querySelector(".text-head")?.classList.remove("titre-header-dark");
+// about
+document.querySelector(".about-me")?.classList.remove("about-me-dark");
+document.querySelectorAll(".titre-about")[0]?.classList.remove("titre-header-dark");
+document.querySelectorAll(".titre-about")[1]?.classList.remove("titre-header-dark");
+document.querySelectorAll(".titre-about")[2]?.classList.remove("titre-header-dark");
+document.querySelectorAll(".titre-about")[3]?.classList.remove("titre-header-dark");
+document.querySelectorAll(".text-article-about")[0]?.classList.remove("titre-header-dark");
+document.querySelectorAll(".text-article-about")[1]?.classList.remove("titre-header-dark");
+// service
+document.querySelector(".service")?.classList.remove("service-dark");
+//projects
+      document.querySelector(".projects")?.classList.remove("about-me-dark");
+      //contact
+      document.querySelector(".contact")?.classList.remove("service-dark");
+      document.querySelectorAll(".titre-info-contact")[0]?.classList.remove("titre-header-dark");
+      document.querySelectorAll(".titre-info-contact")[1]?.classList.remove("titre-header-dark");
+      document.querySelectorAll(".titre-info-contact")[2]?.classList.remove("titre-header-dark");
+ //footer
+      document.querySelector(".footer")?.classList.remove("header-dark");
+      document.querySelector(".copyright")?.classList.remove("titre-header-dark");
     }
   };
 

@@ -243,8 +243,11 @@ export default function Home()  {
         </section>
       </section>
       {/* **********************footer********************************** */}
-
+<section className="footer">
 <Footer  />
+
+</section>
+
 
     </main>
   );
