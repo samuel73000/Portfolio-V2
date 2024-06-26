@@ -40,9 +40,9 @@ export default function Home()  {
     const callback: IntersectionObserverCallback = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-geek");
+          entry.target.classList.add("animate-up-down");
         } else {
-          entry.target.classList.remove("animate-geek");
+          entry.target.classList.remove("animate-up-down");
         }
       });
     };
