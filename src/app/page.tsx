@@ -26,6 +26,11 @@ import vite from "../../public/asset/tech/Vitejs-logo.svg.png";
 import jest from "../../public/asset/tech/jest.svg";
 import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
+import events from "../../public/asset/projet/77events.png";
+import kasa from "../../public/asset/projet/kasa.png";
+import petitsplats from "../../public/asset/projet/lespetitsplats.png";
+import print from "../../public/asset/projet/print.png";
+
 
 export default function Home() {
   // on gere les aniamtion quand on passe sur les img geek
@@ -35,7 +40,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4, // Seuil pour img-geek
+      threshold: 0.4, 
     };
 
     const callback: IntersectionObserverCallback = (entries) => {
@@ -333,28 +338,28 @@ export default function Home() {
         <h3 className="titre-article-about">Réalisations antérieures</h3>
         <div className="container-projects">
           <Projects
-            src={nuageClaire}
+            src={events}
             alt="fsd"
             titre="Noteworthy technology acquisitions 2021"
             texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           />
 
           <Projects
-            src={nuageClaire}
+            src={kasa}
             alt="fsd"
             titre="Noteworthy technology acquisitions 2021"
             texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           />
 
           <Projects
-            src={nuageClaire}
+            src={petitsplats}
             alt="fsd"
             titre="Noteworthy technology acquisitions 2021"
             texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           />
 
           <Projects
-            src={nuageClaire}
+            src={print}
             alt="fsd"
             titre="Noteworthy technology acquisitions 2021"
             texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."

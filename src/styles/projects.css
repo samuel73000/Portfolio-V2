@@ -6,9 +6,11 @@
 .img-projets {
   width: 100%;
   height: 300px;
-  object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .container-texte-projects {
   background-color: #1f2937;
