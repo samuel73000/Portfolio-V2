@@ -178,34 +178,10 @@ useEffect(() => {
 
 
     // Bouton pour télécharger le CV
-    const handleDownload = async () => {
-      const filePath = '/public/CV2024.pdf'; 
-    
-      try {
-        const response = await fetch(filePath);
-        if (!response.ok) {
-          throw new Error('Fichier non trouvé');
-        }
-    
-        const blob = await response.blob();
-    
-        // Créer un lien temporaire
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'CV2024.pdf');
-    
-        // Ajouter le lien au DOM, cliquer dessus, puis le supprimer
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    
-        // Nettoyer l'URL temporaire créée
-        window.URL.revokeObjectURL(url);
-      } catch (error) {
-        console.error('Erreur lors du téléchargement du fichier :', error);
-        // Gérer l'erreur (par exemple, afficher un message à l'utilisateur)
-      }
+    const handleDownload = () => {
+      const filePath = 'https://drive.google.com/file/d/1HedmwWn-pxQJf6Rq-OngYgR7U5pggIC7/view?usp=sharing';
+      // Ouvrir le lien dans un nouvel onglet
+      window.open(filePath, '_blank');
     };
 
   return (
