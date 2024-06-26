@@ -275,7 +275,7 @@ button:hover {
 /* animation img de geek */
 .animate-up-down {
   animation-name: fade-in-slide-up;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
@@ -295,5 +295,15 @@ button:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

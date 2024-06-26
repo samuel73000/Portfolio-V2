@@ -28,53 +28,83 @@ import serviceLogoFront from "../../public/asset/external-web-development-coding
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 
 export default function Home() {
+
+  // on gere les aniamtion quand on passe sur les img geek
+
   const geekImageRef = useRef<HTMLImageElement>(null);
-  const techRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+useEffect(() => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4, // Seuil pour img-geek
+  };
 
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.6,
-    };
-
-    const callback: IntersectionObserverCallback = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-up-down");
-        } else {
-          entry.target.classList.remove("animate-up-down");
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    // Observer for geekImageRef
-    if (geekImageRef.current) {
-      observer.observe(geekImageRef.current);
-    }
-
-    // Observer for techRefs
-    techRefs.current.forEach(techRef => {
-      if (techRef) {
-        observer.observe(techRef);
+  const callback: IntersectionObserverCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+        entry.target.classList.add("animate-up-down");
+      } else {
+        entry.target.classList.remove("animate-up-down");
       }
     });
+  };
 
-    return () => {
-      if (geekImageRef.current) {
-        observer.unobserve(geekImageRef.current);
+  const observer = new IntersectionObserver(callback, options);
+
+  if (geekImageRef.current) {
+    observer.observe(geekImageRef.current);
+  }
+
+  return () => {
+    if (geekImageRef.current) {
+      observer.unobserve(geekImageRef.current);
+    }
+  };
+}, []);
+
+
+
+
+
+// on gere les aniamtion quand on passe sur les technologies
+const techRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+useEffect(() => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0, // Seuil pour les articles
+  };
+
+  const callback: IntersectionObserverCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
+        entry.target.classList.add("animate-up-down");
+      } else {
+        entry.target.classList.remove("animate-up-down");
       }
-      techRefs.current.forEach(techRef => {
-        if (techRef) {
-          observer.unobserve(techRef);
-        }
-      });
-    };
-  }, []);
+    });
+  };
 
+  const observer = new IntersectionObserver(callback, options);
+
+  techRefs.current.forEach(techRef => {
+    if (techRef) {
+      observer.observe(techRef);
+    }
+  });
+
+  return () => {
+    techRefs.current.forEach(techRef => {
+      if (techRef) {
+        observer.unobserve(techRef);
+      }
+    });
+  };
+}, []);
+
+//  data pour les technologies
   const techSrc = [
     react,
     redux,
