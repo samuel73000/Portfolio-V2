@@ -8,29 +8,37 @@ import nuageSombre from "../../../public/asset/nuageDark.png";
 
 export default function Header() {
   const [currentImageLune, setCurrentImageLune] = useState(soleil.src);
-  const sections = ["Accueil", " À propos", "Services", "Projets", "Contact"];
+  const sections = [
+    "Accueil",
+    "Présentation",
+    "Services",
+    "Projets",
+    "Contact",
+  ];
   const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-
+  // ////////////////////////dark mode//////////////////////////////////////////////
   const applyDarkMode = () => {
     document.querySelector(".header-container")?.classList.add("header-dark");
     document.querySelector(".titre-header")?.classList.add("titre-header-dark");
-    document.querySelectorAll(".nav-header-a").forEach(navHeader => {
+    document.querySelectorAll(".nav-header-a").forEach((navHeader) => {
       navHeader.classList.add("titre-header-dark");
     });
-    document.querySelector(".img-nuage")?.setAttribute("srcset", nuageSombre.src);
+    document
+      .querySelector(".img-nuage")
+      ?.setAttribute("srcset", nuageSombre.src);
     document.querySelector(".titre-head")?.classList.add("titre-header-dark");
     document.querySelector(".text-head")?.classList.add("titre-header-dark");
     document.querySelector(".about-me")?.classList.add("about-me-dark");
-    document.querySelectorAll(".titre-about").forEach(titre => {
+    document.querySelectorAll(".titre-about").forEach((titre) => {
       titre.classList.add("titre-header-dark");
     });
-    document.querySelectorAll(".text-article-about").forEach(text => {
+    document.querySelectorAll(".text-article-about").forEach((text) => {
       text.classList.add("titre-header-dark");
     });
     document.querySelector(".service")?.classList.add("service-dark");
     document.querySelector(".projects")?.classList.add("about-me-dark");
     document.querySelector(".contact")?.classList.add("service-dark");
-    document.querySelectorAll(".titre-info-contact").forEach(titre => {
+    document.querySelectorAll(".titre-info-contact").forEach((titre) => {
       titre.classList.add("titre-header-dark");
     });
     document.querySelector(".footer")?.classList.add("header-dark");
@@ -38,25 +46,33 @@ export default function Header() {
   };
 
   const removeDarkMode = () => {
-    document.querySelector(".header-container")?.classList.remove("header-dark");
-    document.querySelector(".titre-header")?.classList.remove("titre-header-dark");
-    document.querySelectorAll(".nav-header-a").forEach(navHeader => {
+    document
+      .querySelector(".header-container")
+      ?.classList.remove("header-dark");
+    document
+      .querySelector(".titre-header")
+      ?.classList.remove("titre-header-dark");
+    document.querySelectorAll(".nav-header-a").forEach((navHeader) => {
       navHeader.classList.remove("titre-header-dark");
     });
-    document.querySelector(".img-nuage")?.setAttribute("srcset", nuageClaire.src);
-    document.querySelector(".titre-head")?.classList.remove("titre-header-dark");
+    document
+      .querySelector(".img-nuage")
+      ?.setAttribute("srcset", nuageClaire.src);
+    document
+      .querySelector(".titre-head")
+      ?.classList.remove("titre-header-dark");
     document.querySelector(".text-head")?.classList.remove("titre-header-dark");
     document.querySelector(".about-me")?.classList.remove("about-me-dark");
-    document.querySelectorAll(".titre-about").forEach(titre => {
+    document.querySelectorAll(".titre-about").forEach((titre) => {
       titre.classList.remove("titre-header-dark");
     });
-    document.querySelectorAll(".text-article-about").forEach(text => {
+    document.querySelectorAll(".text-article-about").forEach((text) => {
       text.classList.remove("titre-header-dark");
     });
     document.querySelector(".service")?.classList.remove("service-dark");
     document.querySelector(".projects")?.classList.remove("about-me-dark");
     document.querySelector(".contact")?.classList.remove("service-dark");
-    document.querySelectorAll(".titre-info-contact").forEach(titre => {
+    document.querySelectorAll(".titre-info-contact").forEach((titre) => {
       titre.classList.remove("titre-header-dark");
     });
     document.querySelector(".footer")?.classList.remove("header-dark");
@@ -64,7 +80,8 @@ export default function Header() {
   };
 
   const toggleImage = () => {
-    const newImageLune = currentImageLune === soleil.src ? lune.src : soleil.src;
+    const newImageLune =
+      currentImageLune === soleil.src ? lune.src : soleil.src;
     setCurrentImageLune(newImageLune);
 
     if (newImageLune === lune.src) {
@@ -73,11 +90,13 @@ export default function Header() {
       removeDarkMode();
     }
   };
-
+  ///////////LES HOVERS SUR LA NAV PAR SECTIOJN VISIBLE ///////////////////////////
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       e.preventDefault();
-      const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href')?.substring(1);
+      const targetId = (e.currentTarget as HTMLAnchorElement)
+        .getAttribute("href")
+        ?.substring(1);
       const targetElement = targetId ? document.getElementById(targetId) : null;
 
       if (targetElement) {
@@ -90,8 +109,10 @@ export default function Header() {
         const step = (timestamp: number) => {
           if (!start) start = timestamp;
           const progress = timestamp - start;
-          const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-          const y = startPosition + distance * easeInOutQuad(progress / duration);
+          const easeInOutQuad = (t: number) =>
+            t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+          const y =
+            startPosition + distance * easeInOutQuad(progress / duration);
           window.scrollTo(0, y);
           if (progress < duration) {
             window.requestAnimationFrame(step);
@@ -102,8 +123,8 @@ export default function Header() {
       }
     };
 
-    navRefs.current.forEach(anchor => {
-      anchor?.addEventListener('click', handleClick);
+    navRefs.current.forEach((anchor) => {
+      anchor?.addEventListener("click", handleClick);
     });
 
     const observerOptions = {
@@ -113,7 +134,7 @@ export default function Header() {
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
         const navItem = document.querySelector(`a[href="#${id}"]`);
         if (entry.isIntersecting) {
@@ -124,8 +145,11 @@ export default function Header() {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    sections.forEach(sectionId => {
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    sections.forEach((sectionId) => {
       const section = document.getElementById(sectionId);
       if (section) {
         observer.observe(section);
@@ -133,10 +157,10 @@ export default function Header() {
     });
 
     return () => {
-      navRefs.current.forEach(anchor => {
-        anchor?.removeEventListener('click', handleClick);
+      navRefs.current.forEach((anchor) => {
+        anchor?.removeEventListener("click", handleClick);
       });
-      sections.forEach(sectionId => {
+      sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
           observer.unobserve(section);
@@ -154,7 +178,7 @@ export default function Header() {
             key={section}
             href={`#${section}`}
             className="nav-header-a"
-            ref={el => {
+            ref={(el) => {
               navRefs.current[index] = el;
             }}
           >
@@ -171,5 +195,3 @@ export default function Header() {
     </header>
   );
 }
-
-

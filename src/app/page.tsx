@@ -28,82 +28,77 @@ import serviceLogoFront from "../../public/asset/external-web-development-coding
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 
 export default function Home() {
-
   // on gere les aniamtion quand on passe sur les img geek
   const geekImageRef = useRef<HTMLImageElement>(null);
 
-useEffect(() => {
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.4, // Seuil pour img-geek
-  };
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.4, // Seuil pour img-geek
+    };
 
-  const callback: IntersectionObserverCallback = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-        entry.target.classList.add("animate-up-down");
-      } else {
-        entry.target.classList.remove("animate-up-down");
-      }
-    });
-  };
+    const callback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+          entry.target.classList.add("animate-up-down");
+        } else {
+          entry.target.classList.remove("animate-up-down");
+        }
+      });
+    };
 
-  const observer = new IntersectionObserver(callback, options);
+    const observer = new IntersectionObserver(callback, options);
 
-  if (geekImageRef.current) {
-    observer.observe(geekImageRef.current);
-  }
-
-  return () => {
     if (geekImageRef.current) {
-      observer.unobserve(geekImageRef.current);
+      observer.observe(geekImageRef.current);
     }
-  };
-}, []);
 
-
-
-
-
-// on gere les aniamtion quand on passe sur les technologies
-const techRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-useEffect(() => {
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1.0, // Seuil pour les articles
-  };
-
-  const callback: IntersectionObserverCallback = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
-        entry.target.classList.add("animate-up-down");
-      } else {
-        entry.target.classList.remove("animate-up-down");
+    return () => {
+      if (geekImageRef.current) {
+        observer.unobserve(geekImageRef.current);
       }
-    });
-  };
+    };
+  }, []);
 
-  const observer = new IntersectionObserver(callback, options);
+  // on gere les aniamtion quand on passe sur les technologies
+  const techRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  techRefs.current.forEach(techRef => {
-    if (techRef) {
-      observer.observe(techRef);
-    }
-  });
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0, // Seuil pour les articles
+    };
 
-  return () => {
-    techRefs.current.forEach(techRef => {
+    const callback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
+          entry.target.classList.add("animate-up-down");
+        } else {
+          entry.target.classList.remove("animate-up-down");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    techRefs.current.forEach((techRef) => {
       if (techRef) {
-        observer.unobserve(techRef);
+        observer.observe(techRef);
       }
     });
-  };
-}, []);
 
-//  data pour les technologies
+    return () => {
+      techRefs.current.forEach((techRef) => {
+        if (techRef) {
+          observer.unobserve(techRef);
+        }
+      });
+    };
+  }, []);
+
+  //  data pour les technologies
   const techSrc = [
     react,
     redux,
@@ -137,57 +132,55 @@ useEffect(() => {
     "Jest",
   ];
 
-  
-    // on gere les aniamtion quand on passe sur les services
+  // on gere les aniamtion quand on passe sur les services
 
-  const serviceRefs = useRef<HTMLDivElement[]>([]); 
-    useEffect(() => {
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5, // Seuil pour les articles de service
-      };
-  
-      const callback: IntersectionObserverCallback = (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
-            entry.target.classList.add('apparition-service');
-          } else {
-            entry.target.classList.remove('apparition-service');
-          }
-        });
-      };
-  
-      const observer = new IntersectionObserver(callback, options);
-  
-      serviceRefs.current.forEach(serviceRef => {
-        if (serviceRef) {
-          observer.observe(serviceRef);
+  const serviceRefs = useRef<HTMLDivElement[]>([]);
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Seuil pour les articles de service
+    };
+
+    const callback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
+          entry.target.classList.add("apparition-service");
+        } else {
+          entry.target.classList.remove("apparition-service");
         }
       });
-  
-      return () => {
-        serviceRefs.current.forEach(serviceRef => {
-          if (serviceRef) {
-            observer.unobserve(serviceRef);
-          }
-        });
-      };
-    }, []);
-
-
-
-    // Bouton pour télécharger le CV
-    const handleDownload = () => {
-      const filePath = 'https://drive.google.com/file/d/1HedmwWn-pxQJf6Rq-OngYgR7U5pggIC7/view?usp=sharing';
-      // Ouvrir le lien dans un nouvel onglet
-      window.open(filePath, '_blank');
     };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    serviceRefs.current.forEach((serviceRef) => {
+      if (serviceRef) {
+        observer.observe(serviceRef);
+      }
+    });
+
+    return () => {
+      serviceRefs.current.forEach((serviceRef) => {
+        if (serviceRef) {
+          observer.unobserve(serviceRef);
+        }
+      });
+    };
+  }, []);
+
+  // Bouton pour télécharger le CV
+  const handleDownload = () => {
+    const filePath =
+      "https://drive.google.com/file/d/1HedmwWn-pxQJf6Rq-OngYgR7U5pggIC7/view?usp=sharing";
+    // Ouvrir le lien dans un nouvel onglet
+    window.open(filePath, "_blank");
+  };
 
   return (
     <main>
       {/* *********************head*************************** */}
-      <section className="head" id="home">
+      <section className="head" id="Accueil">
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
         <Image
           src={geek}
@@ -216,7 +209,8 @@ useEffect(() => {
             />
           </div>
           <p className="text-head">
-          Je suis un développeur freelance spécialisé en React.js et Next.js, avec 2 ans d'expérience dans le domaine du développement web.
+            Je suis un développeur freelance spécialisé en React.js et Next.js,
+            avec 2 ans d'expérience dans le domaine du développement web.
           </p>
           <div className="container-reseaux-head">
             <a href="https://www.linkedin.com/in/samuel-pouard/">
@@ -231,27 +225,33 @@ useEffect(() => {
             </a>
           </div>
 
-
           <button className="btn-head" onClick={handleDownload}>
-      Télécharger CV
-    </button>
-
-
+            Télécharger CV
+          </button>
         </div>
       </section>
       {/* **********************about me******************** */}
-      <section className="about-me" id="about">
+      <section className="about-me" id="Présentation">
         <h2 className="titre-about">À propos de moi</h2>
         <article className="article-about">
           <h3 className="titre-article-about">En savoir plus sur moi</h3>
           <p className="text-article-about">
-          Je suis un développeur web autodidacte et développeur d'applications mobiles, passionné par la création de nouvelles fonctionnalités, de la conception à la production. J'apporte une attention particulière à l'expérience utilisateur tout en écrivant un code réutilisable et efficace. Ma passion réside dans la combinaison du bon design, de la technologie et de l'innovation dans tous mes projets, que j'accompagne de la conception initiale jusqu'à la sortie
+            Je suis un développeur web autodidacte et développeur d'applications
+            mobiles, passionné par la création de nouvelles fonctionnalités, de
+            la conception à la production. J'apporte une attention particulière
+            à l'expérience utilisateur tout en écrivant un code réutilisable et
+            efficace. Ma passion réside dans la combinaison du bon design, de la
+            technologie et de l'innovation dans tous mes projets, que
+            j'accompagne de la conception initiale jusqu'à la sortie
           </p>
         </article>
         <article className="article-about">
           <h3 className="titre-article-about">Technologies et Outils</h3>
           <p className="text-article-about">
-          En utilisant une combinaison de technologies de pointe et de logiciels open-source fiables, je développe des applications et des sites web performants et centrés sur l'utilisateur pour smartphones, tablettes et ordinateurs de bureau.
+            En utilisant une combinaison de technologies de pointe et de
+            logiciels open-source fiables, je développe des applications et des
+            sites web performants et centrés sur l'utilisateur pour smartphones,
+            tablettes et ordinateurs de bureau.
           </p>
         </article>
         <div className="tech-about">
@@ -259,7 +259,7 @@ useEffect(() => {
             <article
               key={index}
               className="article-tech-about"
-              ref={el => {
+              ref={(el) => {
                 if (el) {
                   techRefs.current[index] = el as HTMLDivElement;
                 }
@@ -277,24 +277,39 @@ useEffect(() => {
       </section>
 
       {/* **********************service******************** */}
-      <section className="service" id="service">
+      <section className="service" id="Services">
         <h2 className="titre-about">Services </h2>
         <h3 className="titre-article-about">Ce que je propose</h3>
         <div className="container-article-service">
-          <article className="article-service" ref={el => { if (el) serviceRefs.current.push(el as HTMLDivElement); }}> 
+          <article
+            className="article-service"
+            ref={(el) => {
+              if (el) serviceRefs.current.push(el as HTMLDivElement);
+            }}
+          >
             <Image
               src={serviceLogoFront}
               alt="service logo"
               className="img-service"
             />
             <h4 className="title-article-service">
-            Développement d'Applications Web
+              Développement d'Applications Web
             </h4>
             <p className="text-artcile-service">
-            Je mets en œuvre une variété de technologies modernes et de logiciels open-source fiables pour créer des applications web performantes et orientées utilisateur. Mon approche inclut la conception d'architectures robustes, l'optimisation de la performance et la sécurité des données, afin de fournir des solutions web adaptées aux besoins spécifiques de chaque projet.
+              Je mets en œuvre une variété de technologies modernes et de
+              logiciels open-source fiables pour créer des applications web
+              performantes et orientées utilisateur. Mon approche inclut la
+              conception d'architectures robustes, l'optimisation de la
+              performance et la sécurité des données, afin de fournir des
+              solutions web adaptées aux besoins spécifiques de chaque projet.
             </p>
           </article>
-          <article className="article-service" ref={el => { if (el) serviceRefs.current.push(el as HTMLDivElement);  }}>
+          <article
+            className="article-service"
+            ref={(el) => {
+              if (el) serviceRefs.current.push(el as HTMLDivElement);
+            }}
+          >
             <Image
               src={serviceLogoBack}
               alt="service logo"
@@ -302,13 +317,18 @@ useEffect(() => {
             />
             <h4 className="title-article-service">Conception Web</h4>
             <p className="text-artcile-service">
-            La conception web est bien plus qu'une simple esthétique : elle allie créativité et fonctionnalité pour offrir des expériences utilisateur exceptionnelles. En utilisant une approche centrée sur l'utilisateur, je crée des interfaces intuitives et attrayantes qui non seulement captivent, mais qui optimisent également l'interaction et la navigation pour les utilisateurs. 
+              La conception web est bien plus qu'une simple esthétique : elle
+              allie créativité et fonctionnalité pour offrir des expériences
+              utilisateur exceptionnelles. En utilisant une approche centrée sur
+              l'utilisateur, je crée des interfaces intuitives et attrayantes
+              qui non seulement captivent, mais qui optimisent également
+              l'interaction et la navigation pour les utilisateurs.
             </p>
           </article>
         </div>
       </section>
       {/* **********************project********************************** */}
-      <section className="projects" id="projects">
+      <section className="projects" id="Projets">
         <h2 className="titre-about">Projets</h2>
         <h3 className="titre-article-about">Réalisations antérieures</h3>
         <div className="container-projects">
@@ -345,11 +365,13 @@ useEffect(() => {
         </div>
       </section>
       {/* **********************contacte********************************** */}
-      <section className="contact" id="contact">
+      <section className="contact" id="Contact">
         <h2 className="titre-about">Contact</h2>
         <h3 className="titre-article-about">Connectez-vous avec moi</h3>
         <p className="text-titre-contact">
-        Si vous souhaitez en savoir plus sur moi ou sur mon travail, ou si vous souhaitez simplement dire bonjour, envoyez-moi un message. J'adorerais avoir de vos nouvelles.
+          Si vous souhaitez en savoir plus sur moi ou sur mon travail, ou si
+          vous souhaitez simplement dire bonjour, envoyez-moi un message.
+          J'adorerais avoir de vos nouvelles.
         </p>
         <section className="container-contact-all">
           <article className="container-form">
