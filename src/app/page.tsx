@@ -145,7 +145,7 @@ useEffect(() => {
       const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.4, // Seuil pour les articles de service
+        threshold: 0.5, // Seuil pour les articles de service
       };
   
       const callback: IntersectionObserverCallback = (entries) => {
@@ -213,14 +213,14 @@ useEffect(() => {
             CloudStok Technologies as a Front-End Developer
           </p>
           <div className="container-reseaux-head">
-            <a href="#">
+            <a href="https://www.linkedin.com/in/samuel-pouard/">
               <Image
                 src={linkedin}
                 alt="logo linkedin"
                 className="logo-linkedin"
               />
             </a>
-            <a href="#">
+            <a href="https://github.com/samuel73000">
               <Image src={github} alt="logo github" className="logo-github" />
             </a>
           </div>
@@ -370,14 +370,14 @@ useEffect(() => {
             </p>
             <h3 className="titre-info-contact">social</h3>
             <div className="social-info-contact">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/samuel-pouard/">
                 <Image
                   src={linkedin}
                   alt="logo linkedin"
                   className="logo-linkedin"
                 />
               </a>
-              <a href="#">
+              <a href="https://github.com/samuel73000">
                 <Image src={github} alt="logo github" className="logo-github" />
               </a>
             </div>

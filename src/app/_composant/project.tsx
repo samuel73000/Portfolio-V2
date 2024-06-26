@@ -1,5 +1,7 @@
+"use client";
 import "../../styles/projects.css";
 import Image from "next/image";
+import React, { useEffect, useRef } from 'react';
 
 interface ProjectProps {
   src: any;
@@ -8,6 +10,8 @@ interface ProjectProps {
   texte: string;
 }
 export default function Projects({ src, alt, titre, texte }: ProjectProps) {
+
+
   return (
     <section className="section-projects">
       <Image src={src} alt={alt} className="img-projets" />
