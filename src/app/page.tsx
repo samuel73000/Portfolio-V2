@@ -342,6 +342,7 @@ export default function Home() {
             alt="screen de l'application 77events"
             titre="77 events"
             texte="Site d'une agence événementielle développé en React.js et CSS."
+            lien="https://724events-6.netlify.app/"
           />
 
           <Projects
@@ -349,6 +350,7 @@ export default function Home() {
             alt="screen de l'application kasa"
             titre="Kasa"
             texte="Plateforme de réservation de logements réalisée avec React, Redux et Ts."
+            lien="https://kasa-4.netlify.app/"
           />
 
           <Projects
@@ -356,6 +358,7 @@ export default function Home() {
             alt="screen de l'application les petits plats"
             titre="Les petits plats"
             texte="Site de recettes variées conçu en JavaScript, HTML et CSS."
+            lien="https://les-petits-plats-sp.netlify.app/"
           />
 
           <Projects
@@ -363,6 +366,7 @@ export default function Home() {
             alt="screen de l'application print"
             titre="Print it"
             texte="Plateforme d'une agence d'impression créée avec JavaScript, HTML et CSS."
+            lien="https://print-it-3.netlify.app/"
           />
         </div>
         {/* <div className="container-btn-projects">
