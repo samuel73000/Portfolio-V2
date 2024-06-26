@@ -1,66 +1,66 @@
-.header-container{
-    position: fixed;
-    display: flex;
-    align-items: center;
-height: 70px;
-top: 0; 
-left: 0; 
-width: 100%; 
-z-index: 1000; 
-background-color: white;
+.header-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
 }
 
-.titre-header{
-    font-size: 1.2rem;
-    margin-left:3% ;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
+.titre-header {
+  font-size: 1.2rem;
+  margin-left: 3%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.nav-header{
-    align-items: center;
-    display: flex;
-    position: absolute;
-    right: 8%;
-    gap: 2rem;
+.nav-header {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  right: 8%;
+  gap: 2rem;
 }
 
-.nav-header-a{
-    margin-right: 10px;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 15px;
-    color: black;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
+.nav-header-a {
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
-.nav-header-a:hover{
-
-    background-color:rgb(59, 130, 246) ;
-    color: white;
+.nav-header-a:hover {
+  background-color: rgb(59, 130, 246);
+  color: white;
 }
-.active-a{
-    background-color:rgb(59, 130, 246) ;
-    color: white;
+.active-a {
+  background-color: rgb(59, 130, 246);
+  color: white;
 }
-
 
 /* dark */
-.header-dark{
-    background-color: #374151;
+.header-dark {
+  background-color: #374151;
 }
-.titre-header-dark{
-    color: white !important;
+.titre-header-dark {
+  color: white !important;
 }
-.header-img-darkmode{
-    position: absolute;
-    right: 5%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+.header-img-darkmode {
+  position: absolute;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
-.about-me-dark{
-    background-color: #111827;
-  }
-  .service-dark{
-    background-color: #000000 !important;
-  }
+.about-me-dark {
+  background-color: #111827;
+}
+.service-dark {
+  background-color: #000000 !important;
+}

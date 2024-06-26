@@ -31,7 +31,6 @@ import kasa from "../../public/asset/projet/kasa.png";
 import petitsplats from "../../public/asset/projet/lespetitsplats.png";
 import print from "../../public/asset/projet/print.png";
 
-
 export default function Home() {
   // on gere les aniamtion quand on passe sur les img geek
   const geekImageRef = useRef<HTMLImageElement>(null);
@@ -40,7 +39,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4, 
+      threshold: 0.4,
     };
 
     const callback: IntersectionObserverCallback = (entries) => {

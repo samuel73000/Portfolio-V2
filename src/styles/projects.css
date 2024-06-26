@@ -19,8 +19,7 @@
   z-index: 1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    border-radius:0 0 10px 10px ;
-
+  border-radius: 0 0 10px 10px;
 }
 .titre-projects {
   font-size: 24px;
@@ -42,5 +41,3 @@
   font-weight: 700;
   cursor: pointer;
 }
-
-
