@@ -8,7 +8,7 @@ import nuageSombre from "../../../public/asset/nuageDark.png";
 
 export default function Header() {
   const [currentImageLune, setCurrentImageLune] = useState(soleil.src);
-  const sections = ["home", "about", "service", "projects", "contact"];
+  const sections = ["Accueil", " À propos", "Services", "Projets", "Contact"];
   const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const applyDarkMode = () => {

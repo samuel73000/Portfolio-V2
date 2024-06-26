@@ -177,9 +177,20 @@ useEffect(() => {
 
 
 
-
-
-
+    // Bouton pour télécharger le CV
+    const handleDownload = () => {
+      const filePath = '/public/asset/CV2024.pdf'; // chemin vers votre fichier CV dans le répertoire public
+    
+      // Créer un lien temporaire
+      const link = document.createElement('a');
+      link.href = filePath;
+      link.setAttribute('download', 'CV 2024.pdf');
+      
+      // Ajouter le lien au DOM, cliquer dessus, puis le supprimer
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
   return (
     <main>
       {/* *********************head*************************** */}
@@ -192,13 +203,16 @@ useEffect(() => {
           ref={geekImageRef}
         />
         <div>
-          <h2 className="titre-head">Hi, I am Samuel </h2>
+          <h2 className="titre-head">Salut, moi c'est Samuel</h2>
           <div className="typeWriter">
             <Typewriter
               words={[
                 "Développeur Front-End",
-                "Développeur freelance ",
-                "expert en React.js , Next.js",
+                "Freelance spécialisé React.js",
+                "Expert en Next.js",
+                "Spécialiste en TypeScript",
+                "Développeur freelance",
+                "Créateur de solutions React.js",
               ]}
               loop={50}
               cursor
@@ -209,8 +223,7 @@ useEffect(() => {
             />
           </div>
           <p className="text-head">
-            I am a Front-End / Full-Stack Developer. I am currently working at
-            CloudStok Technologies as a Front-End Developer
+          Je suis un développeur freelance spécialisé en React.js et Next.js, avec 2 ans d'expérience dans le domaine du développement web.
           </p>
           <div className="container-reseaux-head">
             <a href="https://www.linkedin.com/in/samuel-pouard/">
@@ -224,31 +237,28 @@ useEffect(() => {
               <Image src={github} alt="logo github" className="logo-github" />
             </a>
           </div>
-          <button className="btn-head">Resume</button>
+
+
+          <button className="btn-head" onClick={handleDownload}>
+      Télécharger CV
+    </button>
+
+
         </div>
       </section>
       {/* **********************about me******************** */}
       <section className="about-me" id="about">
-        <h2 className="titre-about">About Me</h2>
+        <h2 className="titre-about">À propos de moi</h2>
         <article className="article-about">
-          <h3 className="titre-article-about">A bit about me</h3>
+          <h3 className="titre-article-about">En savoir plus sur moi</h3>
           <p className="text-article-about">
-            I'm a self-taught web developer and Mobile App Developer with
-            experience in designing new features from ideation to production,
-            implementation of wireframes and design flows into high performance
-            software applications. I take into consideration the user experience
-            while writing reusable and efficient code. I passionately combine
-            good design, technology, and innovation in all my projects, which I
-            like to accompany from the first idea to release.Currently, I'm
-            focused on the backend development.
+          Je suis un développeur web autodidacte et développeur d'applications mobiles, passionné par la création de nouvelles fonctionnalités, de la conception à la production. J'apporte une attention particulière à l'expérience utilisateur tout en écrivant un code réutilisable et efficace. Ma passion réside dans la combinaison du bon design, de la technologie et de l'innovation dans tous mes projets, que j'accompagne de la conception initiale jusqu'à la sortie
           </p>
         </article>
         <article className="article-about">
-          <h3 className="titre-article-about">Technologies and Tools</h3>
+          <h3 className="titre-article-about">Technologies et Outils</h3>
           <p className="text-article-about">
-            Using a combination of cutting-edge technologies and reliable
-            open-source software I build user-focused, performant apps and
-            websites for smartphones, tablets, and desktops.
+          En utilisant une combinaison de technologies de pointe et de logiciels open-source fiables, je développe des applications et des sites web performants et centrés sur l'utilisateur pour smartphones, tablettes et ordinateurs de bureau.
           </p>
         </article>
         <div className="tech-about">
@@ -275,8 +285,8 @@ useEffect(() => {
 
       {/* **********************service******************** */}
       <section className="service" id="service">
-        <h2 className="titre-about">Services</h2>
-        <h3 className="titre-article-about">What I Provide</h3>
+        <h2 className="titre-about">Services </h2>
+        <h3 className="titre-article-about">Ce que je propose</h3>
         <div className="container-article-service">
           <article className="article-service" ref={el => { if (el) serviceRefs.current.push(el as HTMLDivElement); }}> 
             <Image
@@ -285,14 +295,10 @@ useEffect(() => {
               className="img-service"
             />
             <h4 className="title-article-service">
-              Web Application Development
+            Développement d'Applications Web
             </h4>
             <p className="text-artcile-service">
-              Web design encompasses many different skills and disciplines in
-              the production and maintenance of websites. The different areas of
-              web design include web graphic design user interface design
-              authoring, including standardised code and proprietary software
-              user experience design and search engine
+            Je mets en œuvre une variété de technologies modernes et de logiciels open-source fiables pour créer des applications web performantes et orientées utilisateur. Mon approche inclut la conception d'architectures robustes, l'optimisation de la performance et la sécurité des données, afin de fournir des solutions web adaptées aux besoins spécifiques de chaque projet.
             </p>
           </article>
           <article className="article-service" ref={el => { if (el) serviceRefs.current.push(el as HTMLDivElement);  }}>
@@ -301,21 +307,17 @@ useEffect(() => {
               alt="service logo"
               className="img-service"
             />
-            <h4 className="title-article-service">Backend Development</h4>
+            <h4 className="title-article-service">Conception Web</h4>
             <p className="text-artcile-service">
-              Graphic design is a craft where professionals create visual
-              content to communicate messages. By applying visual hierarchy and
-              page layout techniques, designers use typography and pictures to
-              meet users' specific needs and focus on the logic of displaying
-              elements in interactive designs, to optimize the user experience.
+            La conception web est bien plus qu'une simple esthétique : elle allie créativité et fonctionnalité pour offrir des expériences utilisateur exceptionnelles. En utilisant une approche centrée sur l'utilisateur, je crée des interfaces intuitives et attrayantes qui non seulement captivent, mais qui optimisent également l'interaction et la navigation pour les utilisateurs. 
             </p>
           </article>
         </div>
       </section>
       {/* **********************project********************************** */}
       <section className="projects" id="projects">
-        <h2 className="titre-about">Projects</h2>
-        <h3 className="titre-article-about">What I Built</h3>
+        <h2 className="titre-about">Projets</h2>
+        <h3 className="titre-article-about">Réalisations antérieures</h3>
         <div className="container-projects">
           <Projects
             src={nuageClaire}
@@ -346,16 +348,15 @@ useEffect(() => {
           />
         </div>
         <div className="container-btn-projects">
-          <button className="btn-projects-show">Show More</button>
+          <button className="btn-projects-show">Voir plus</button>
         </div>
       </section>
       {/* **********************contacte********************************** */}
       <section className="contact" id="contact">
         <h2 className="titre-about">Contact</h2>
-        <h3 className="titre-article-about">Connect with me</h3>
+        <h3 className="titre-article-about">Connectez-vous avec moi</h3>
         <p className="text-titre-contact">
-          If you want to know more about me or my work, or if you would just
-          like to say hello, send me a message. I'd love to hear from you.
+        Si vous souhaitez en savoir plus sur moi ou sur mon travail, ou si vous souhaitez simplement dire bonjour, envoyez-moi un message. J'adorerais avoir de vos nouvelles.
         </p>
         <section className="container-contact-all">
           <article className="container-form">
@@ -364,11 +365,11 @@ useEffect(() => {
           <article>
             <h3 className="titre-info-contact">email</h3>
             <p className="text-info-contact">thosam73000@gmail.com</p>
-            <h3 className="titre-info-contact">adress</h3>
+            <h3 className="titre-info-contact">Adresse</h3>
             <p className="text-info-contact">
               101 avenue d'annecy, Lyon, France
             </p>
-            <h3 className="titre-info-contact">social</h3>
+            <h3 className="titre-info-contact">sociale</h3>
             <div className="social-info-contact">
               <a href="https://www.linkedin.com/in/samuel-pouard/">
                 <Image
