@@ -178,19 +178,36 @@ useEffect(() => {
 
 
     // Bouton pour télécharger le CV
-    const handleDownload = () => {
-      const filePath = '/public/CV2024.pdf'; // chemin vers votre fichier CV dans le répertoire public
+    const handleDownload = async () => {
+      const filePath = '/public/CV2024.pdf'; 
     
-      // Créer un lien temporaire
-      const link = document.createElement('a');
-      link.href = filePath;
-      link.setAttribute('download', 'CV2024.pdf');
-      
-      // Ajouter le lien au DOM, cliquer dessus, puis le supprimer
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      try {
+        const response = await fetch(filePath);
+        if (!response.ok) {
+          throw new Error('Fichier non trouvé');
+        }
+    
+        const blob = await response.blob();
+    
+        // Créer un lien temporaire
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'CV2024.pdf');
+    
+        // Ajouter le lien au DOM, cliquer dessus, puis le supprimer
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    
+        // Nettoyer l'URL temporaire créée
+        window.URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error('Erreur lors du téléchargement du fichier :', error);
+        // Gérer l'erreur (par exemple, afficher un message à l'utilisateur)
+      }
     };
+
   return (
     <main>
       {/* *********************head*************************** */}
