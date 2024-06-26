@@ -27,8 +27,10 @@ import jest from "../../public/asset/tech/jest.svg";
 import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 
-export default function Home()  {
+export default function Home() {
   const geekImageRef = useRef<HTMLImageElement>(null);
+  const techRefs = useRef<(HTMLDivElement | null)[]>([]);
+
 
   useEffect(() => {
     const options = {
@@ -37,7 +39,7 @@ export default function Home()  {
       threshold: 0.6,
     };
 
-    const callback: IntersectionObserverCallback = (entries, observer) => {
+    const callback: IntersectionObserverCallback = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate-up-down");
@@ -49,18 +51,29 @@ export default function Home()  {
 
     const observer = new IntersectionObserver(callback, options);
 
+    // Observer for geekImageRef
     if (geekImageRef.current) {
       observer.observe(geekImageRef.current);
     }
+
+    // Observer for techRefs
+    techRefs.current.forEach(techRef => {
+      if (techRef) {
+        observer.observe(techRef);
+      }
+    });
 
     return () => {
       if (geekImageRef.current) {
         observer.unobserve(geekImageRef.current);
       }
+      techRefs.current.forEach(techRef => {
+        if (techRef) {
+          observer.unobserve(techRef);
+        }
+      });
     };
   }, []);
-
-
 
   const techSrc = [
     react,
@@ -98,9 +111,14 @@ export default function Home()  {
   return (
     <main>
       {/* *********************head*************************** */}
-      <section className="head" id="home" >
+      <section className="head" id="home">
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
-        <Image src={geek} alt="un geek qui dev" className="img-dev" ref={geekImageRef} />
+        <Image
+          src={geek}
+          alt="un geek qui dev"
+          className="img-dev"
+          ref={geekImageRef}
+        />
         <div>
           <h2 className="titre-head">Hi, I am Samuel </h2>
           <div className="typeWriter">
@@ -124,7 +142,11 @@ export default function Home()  {
           </p>
           <div className="container-reseaux-head">
             <a href="#">
-              <Image src={linkedin} alt="logo linkedin" className="logo-linkedin" />
+              <Image
+                src={linkedin}
+                alt="logo linkedin"
+                className="logo-linkedin"
+              />
             </a>
             <a href="#">
               <Image src={github} alt="logo github" className="logo-github" />
@@ -159,7 +181,15 @@ export default function Home()  {
         </article>
         <div className="tech-about">
           {techSrc.map((tech, index) => (
-            <article key={index} className="article-tech-about">
+            <article
+              key={index}
+              className="article-tech-about"
+              ref={el => {
+                if (el) {
+                  techRefs.current[index] = el as HTMLDivElement;
+                }
+              }}
+            >
               <Image
                 src={tech}
                 alt={`logo ${nameTech[index]}`}
@@ -263,27 +293,29 @@ export default function Home()  {
             <h3 className="titre-info-contact">email</h3>
             <p className="text-info-contact">thosam73000@gmail.com</p>
             <h3 className="titre-info-contact">adress</h3>
-            <p className="text-info-contact">101 avenue d'annecy, Lyon, France</p>
+            <p className="text-info-contact">
+              101 avenue d'annecy, Lyon, France
+            </p>
             <h3 className="titre-info-contact">social</h3>
             <div className="social-info-contact">
               <a href="#">
-                <Image src={linkedin} alt="logo linkedin" className="logo-linkedin"  />
+                <Image
+                  src={linkedin}
+                  alt="logo linkedin"
+                  className="logo-linkedin"
+                />
               </a>
               <a href="#">
-                <Image src={github} alt="logo github" className="logo-github"  />
+                <Image src={github} alt="logo github" className="logo-github" />
               </a>
             </div>
           </article>
         </section>
       </section>
       {/* **********************footer********************************** */}
-<section className="footer">
-<Footer  />
-
-</section>
-
-
+      <section className="footer">
+        <Footer />
+      </section>
     </main>
   );
-   
-  }
+}
