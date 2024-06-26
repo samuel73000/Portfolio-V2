@@ -179,12 +179,12 @@ useEffect(() => {
 
     // Bouton pour télécharger le CV
     const handleDownload = () => {
-      const filePath = '/public/asset/CV2024.pdf'; // chemin vers votre fichier CV dans le répertoire public
+      const filePath = '/public/CV2024.pdf'; // chemin vers votre fichier CV dans le répertoire public
     
       // Créer un lien temporaire
       const link = document.createElement('a');
       link.href = filePath;
-      link.setAttribute('download', 'CV 2024.pdf');
+      link.setAttribute('download', 'CV2024.pdf');
       
       // Ajouter le lien au DOM, cliquer dessus, puis le supprimer
       document.body.appendChild(link);
