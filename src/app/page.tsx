@@ -1,5 +1,5 @@
 "use client";
-import "../styles/Home.css";
+import "../styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
