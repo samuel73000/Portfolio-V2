@@ -339,35 +339,35 @@ export default function Home() {
         <div className="container-projects">
           <Projects
             src={events}
-            alt="fsd"
-            titre="Noteworthy technology acquisitions 2021"
-            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            alt="screen de l'application 77events"
+            titre="77 events"
+            texte="Site d'une agence événementielle développé en React.js et CSS."
           />
 
           <Projects
             src={kasa}
-            alt="fsd"
-            titre="Noteworthy technology acquisitions 2021"
-            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            alt="screen de l'application kasa"
+            titre="Kasa"
+            texte="Plateforme de réservation de logements réalisée avec React, Redux et Ts."
           />
 
           <Projects
             src={petitsplats}
-            alt="fsd"
-            titre="Noteworthy technology acquisitions 2021"
-            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            alt="screen de l'application les petits plats"
+            titre="Les petits plats"
+            texte="Site de recettes variées conçu en JavaScript, HTML et CSS."
           />
 
           <Projects
             src={print}
-            alt="fsd"
-            titre="Noteworthy technology acquisitions 2021"
-            texte="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            alt="screen de l'application print"
+            titre="Print it"
+            texte="Plateforme d'une agence d'impression créée avec JavaScript, HTML et CSS."
           />
         </div>
-        <div className="container-btn-projects">
+        {/* <div className="container-btn-projects">
           <button className="btn-projects-show">Voir plus</button>
-        </div>
+        </div> */}
       </section>
       {/* **********************contacte********************************** */}
       <section className="contact" id="Contact">

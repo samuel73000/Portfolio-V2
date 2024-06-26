@@ -17,8 +17,7 @@ export default function Projects({ src, alt, titre, texte }: ProjectProps) {
       <div className="container-texte-projects">
         <h3 className="titre-projects">{titre}</h3>
         <p className="texte-projects">{texte}</p>
-        <button className="btn-projects">Read more
-        </button>
+        <button className="btn-projects">Découvrir le site</button>
       </div>
     </section>
   );
