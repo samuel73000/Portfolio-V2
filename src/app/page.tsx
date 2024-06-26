@@ -28,15 +28,6 @@ import serviceLogoFront from "../../public/asset/external-web-development-coding
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
 
 export default function Home()  {
-
-
-
-
-
-
-
-
-
   const geekImageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -68,8 +59,6 @@ export default function Home()  {
       }
     };
   }, []);
-
-
 
 
 
