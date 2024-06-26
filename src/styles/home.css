@@ -297,7 +297,15 @@ button:hover {
     transform: translateY(0);
   }
 }
-@keyframes apparition {
+
+.apparition-service {
+  animation-name: apparition-service;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apparition-service {
   0% {
     opacity: 0;
     transform: scale(0);

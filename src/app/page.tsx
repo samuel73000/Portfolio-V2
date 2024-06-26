@@ -30,7 +30,6 @@ import serviceLogoBack from "../../public/asset/external-backend-no-code-flatico
 export default function Home() {
 
   // on gere les aniamtion quand on passe sur les img geek
-
   const geekImageRef = useRef<HTMLImageElement>(null);
 
 useEffect(() => {
@@ -138,6 +137,49 @@ useEffect(() => {
     "Jest",
   ];
 
+  
+    // on gere les aniamtion quand on passe sur les services
+
+  const serviceRefs = useRef<HTMLDivElement[]>([]); 
+    useEffect(() => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.4, // Seuil pour les articles de service
+      };
+  
+      const callback: IntersectionObserverCallback = (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
+            entry.target.classList.add('apparition-service');
+          } else {
+            entry.target.classList.remove('apparition-service');
+          }
+        });
+      };
+  
+      const observer = new IntersectionObserver(callback, options);
+  
+      serviceRefs.current.forEach(serviceRef => {
+        if (serviceRef) {
+          observer.observe(serviceRef);
+        }
+      });
+  
+      return () => {
+        serviceRefs.current.forEach(serviceRef => {
+          if (serviceRef) {
+            observer.unobserve(serviceRef);
+          }
+        });
+      };
+    }, []);
+
+
+
+
+
+
   return (
     <main>
       {/* *********************head*************************** */}
@@ -236,7 +278,7 @@ useEffect(() => {
         <h2 className="titre-about">Services</h2>
         <h3 className="titre-article-about">What I Provide</h3>
         <div className="container-article-service">
-          <article className="article-service">
+          <article className="article-service" ref={el => { if (el) serviceRefs.current.push(el as HTMLDivElement); }}> 
             <Image
               src={serviceLogoFront}
               alt="service logo"
@@ -253,7 +295,7 @@ useEffect(() => {
               user experience design and search engine
             </p>
           </article>
-          <article className="article-service">
+          <article className="article-service" ref={el => { if (el) serviceRefs.current.push(el as HTMLDivElement);  }}>
             <Image
               src={serviceLogoBack}
               alt="service logo"
