@@ -5,17 +5,15 @@ import soleil from "../../../public/asset/external-sun-lighting-flaticons-flat-f
 import lune from "../../../public/asset/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png";
 import nuageClaire from "../../../public/asset/nuageClaire.png";
 import nuageSombre from "../../../public/asset/nuageDark.png";
+import ModalNav from "./modalNav";
+
 
 export default function Header() {
   const [currentImageLune, setCurrentImageLune] = useState(soleil.src);
-  const sections = [
-    "Accueil",
-    "Présentation",
-    "Services",
-    "Projets",
-    "Contact",
-  ];
+  const [isModalOpen, setIsModalOpen] = useState(false); // État pour le modal
+  const sections = ["Accueil", "Présentation", "Services", "Projets", "Contact"];
   const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
   // ////////////////////////dark mode//////////////////////////////////////////////
   const applyDarkMode = () => {
     document.querySelector(".header-container")?.classList.add("header-dark");
@@ -43,6 +41,7 @@ export default function Header() {
     });
     document.querySelector(".footer")?.classList.add("header-dark");
     document.querySelector(".copyright")?.classList.add("titre-header-dark");
+    document.querySelector(".header-btn-mobile")?.classList.add("header-btn-mobile-dark");
   };
 
   const removeDarkMode = () => {
@@ -77,6 +76,7 @@ export default function Header() {
     });
     document.querySelector(".footer")?.classList.remove("header-dark");
     document.querySelector(".copyright")?.classList.remove("titre-header-dark");
+    document.querySelector(".header-btn-mobile")?.classList.remove("header-btn-mobile-dark");
   };
 
   const toggleImage = () => {
@@ -90,6 +90,11 @@ export default function Header() {
       removeDarkMode();
     }
   };
+
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
+
   ///////////LES HOVERS SUR LA NAV PAR SECTIOJN VISIBLE ///////////////////////////
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -168,19 +173,15 @@ export default function Header() {
       });
     };
   }, []);
-
   return (
-    <header className="header-container">
+<header className="header-container">
       <h1 className="titre-header">Samuel.P</h1>
       <nav className="nav-header">
-        {sections.map((section, index) => (
+        {sections.map((section) => (
           <a
             key={section}
             href={`#${section}`}
             className="nav-header-a"
-            ref={(el) => {
-              navRefs.current[index] = el;
-            }}
           >
             {section.charAt(0).toUpperCase() + section.slice(1)}
           </a>
@@ -192,6 +193,22 @@ export default function Header() {
         className="header-img-darkmode"
         onClick={toggleImage}
       />
+      <button className="header-btn-mobile nohover" onClick={toggleModal}>
+        {isModalOpen ? '✖' : '☰'}
+      </button>
+      <ModalNav isOpen={isModalOpen} onClose={toggleModal}>
+        <div>
+          {sections.map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className="nav-header-a"
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </div>
+      </ModalNav>
     </header>
   );
 }

@@ -16,6 +16,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
+.header-btn-mobile{
+  display: none;
+}
 
 .nav-header {
   align-items: center;
@@ -63,4 +66,59 @@
 }
 .service-dark {
   background-color: #000000 !important;
+}
+
+/* Version mobile */
+@media  (max-width: 768px) {
+ 
+ .nav-header{
+  display: none;
+ }
+ .header-btn-mobile{
+  display: block;
+  position: absolute;
+  right: 5%;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size:20px ;
+ }
+ .nohover:hover {
+   background-color: inherit; 
+   cursor: pointer;
+   outline: none;
+ }
+ 
+ .header-btn-mobile-dark{
+  background-color: #374151;
+  color: white;
+}
+ .header-img-darkmode {
+  position: absolute;
+  right: 15%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.container-nav-mobile {
+  position:fixed; /* Changez à fixed pour le positionnement par rapport à la fenêtre du navigateur */
+  right: 2%;
+  top: 9%; /* Ajustez selon le besoin */
+  z-index: 9999; /* Assurez-vous que ce z-index est très élevé */
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px; /* Ajout de padding pour le contenu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel : ajouter une ombre */
+  overflow: hidden;
+}
+.nav-header-a{
+  display: flex;
+  flex-direction: column;
+
+  
+}
+
 }
