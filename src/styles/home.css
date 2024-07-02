@@ -314,3 +314,43 @@ button:hover {
     opacity: 1;
   }
 }
+
+
+/* ////////////////////////// responsive ////////////////////////// */
+@media (max-width: 768px) {
+.img-nuage{
+  width: 200%;
+}
+.img-dev{
+display: none;
+}
+.titre-head{
+font-size: 1.7rem;
+left: 5%;
+top: 30%;
+}
+.typeWriter{
+  left: 5%;
+  top: 35%;
+  font-size: 1.5rem;
+  width: 90%;
+}
+.text-head{
+  left: 5%;
+  top: 40%;
+  width: 90%;
+  font-size: 1rem;
+}
+.container-reseaux-head{
+  left: 5%;
+  top: 50%;
+}
+.btn-head{
+  left: 5%;
+  top: 57%;
+  padding: 15px 50px;
+  font-size: 1.2rem;
+}
+
+
+}

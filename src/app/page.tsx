@@ -202,7 +202,6 @@ export default function Home() {
                 "Expert en Next.js",
                 "Spécialiste en TypeScript",
                 "Développeur freelance",
-                "Créateur de solutions React.js",
               ]}
               loop={50}
               cursor
