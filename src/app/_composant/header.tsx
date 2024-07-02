@@ -42,6 +42,7 @@ export default function Header() {
     document.querySelector(".footer")?.classList.add("header-dark");
     document.querySelector(".copyright")?.classList.add("titre-header-dark");
     document.querySelector(".header-btn-mobile")?.classList.add("header-btn-mobile-dark");
+    
   };
 
   const removeDarkMode = () => {
@@ -77,6 +78,7 @@ export default function Header() {
     document.querySelector(".footer")?.classList.remove("header-dark");
     document.querySelector(".copyright")?.classList.remove("titre-header-dark");
     document.querySelector(".header-btn-mobile")?.classList.remove("header-btn-mobile-dark");
+
   };
 
   const toggleImage = () => {

@@ -107,12 +107,13 @@
     right: 2%;
     top: 9%; /* Ajustez selon le besoin */
     z-index: 9999; /* Assurez-vous que ce z-index est très élevé */
-    background-color: white;
     border-radius: 25px;
     padding: 10px; /* Ajout de padding pour le contenu */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel : ajouter une ombre */
     overflow: hidden;
+    background-color: white;
   }
+ 
   .nav-header-a {
     display: flex;
     flex-direction: column;
