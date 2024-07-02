@@ -68,7 +68,7 @@
   background-color: #000000 !important;
 }
 
-/* Version mobile */
+/* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
   .nav-header {
     display: none;

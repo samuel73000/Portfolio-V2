@@ -384,7 +384,7 @@ export default function Home() {
           <article className="container-form">
             <Contact />
           </article>
-          <article>
+          <article className="container-info">
             <h3 className="titre-info-contact">email</h3>
             <p className="text-info-contact">thosam73000@gmail.com</p>
             <h3 className="titre-info-contact">Adresse</h3>

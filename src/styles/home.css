@@ -318,7 +318,7 @@ button:hover {
 
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
-  /* header */
+  /*//////////////////// header /////////////////*/
 .img-nuage{
   width: 200%;
 }
@@ -352,13 +352,13 @@ top: 30%;
   padding: 15px 50px;
   font-size: 1.2rem;
 }
-/* about me  */
+/*/////////////// about me  ////////////////*/
 
 .about-me {
   padding-left: 5%;
   padding-right: 5%;
 }
-/* skills */
+/*/////////////// skills ////////////*/
 .tech-about{
   gap: 2rem;
   padding-top: 25px;
@@ -377,7 +377,7 @@ top: 30%;
   padding: 4px 5px 4px 5px;
   cursor: pointer;
 }
-/* service */
+/* /////////////////service/////////////////// */
 .service{
   padding-left: 5%;
   padding-right: 5%;
@@ -389,6 +389,48 @@ top: 30%;
 .article-service{
   width: 100%;
 }
-/* projets */
+/*//////////////// projets///////////////// */
+.projects{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.container-projects{
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+/*///////////// Contact ////////*/
+.contact{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 7%;
+  padding-top: -20px !important;
+}
+.text-titre-contact {
+  width: 100%;
+}
+.container-contact-all{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container-form{
+  width: 110%;
+}
+.titre-info-contact {
+  text-align: start;
+}
+.text-info-contact{
+text-align: start;
+}
+
+.social-info-contact{
+  justify-content: start;
+}
+.container-info{
+  margin-top:30px ;
+}
 
 }

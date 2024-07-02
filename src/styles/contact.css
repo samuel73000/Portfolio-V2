@@ -47,3 +47,9 @@
   font-weight: 700;
   cursor: pointer;
 }
+/* ////////////////////////// responsive ////////////////////////// */
+@media (max-width: 768px) {
+  .submit-form {
+   width: 30%;
+  }
+}
