@@ -318,6 +318,7 @@ button:hover {
 
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
+  /* header */
 .img-nuage{
   width: 200%;
 }
@@ -351,6 +352,43 @@ top: 30%;
   padding: 15px 50px;
   font-size: 1.2rem;
 }
+/* about me  */
 
+.about-me {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* skills */
+.tech-about{
+  gap: 2rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  justify-content: center;
+}
+.article-tech-about{
+  width: 8rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #f9fafb;
+  border: solid 1px rgb(187, 187, 187);
+  border-radius: 0.5rem;
+  text-align: start;
+  align-items: center;
+  padding: 4px 5px 4px 5px;
+  cursor: pointer;
+}
+/* service */
+.service{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.container-article-service{
+  display: flex;
+  flex-direction: column;
+}
+.article-service{
+  width: 100%;
+}
+/* projets */
 
 }
