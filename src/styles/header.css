@@ -103,7 +103,7 @@
   }
 
   .container-nav-mobile {
-    position: fixed; /* Changez à fixed pour le positionnement par rapport à la fenêtre du navigateur */
+    position: fixed; 
     right: 2%;
     top: 9%; /* Ajustez selon le besoin */
     z-index: 9999; /* Assurez-vous que ce z-index est très élevé */
