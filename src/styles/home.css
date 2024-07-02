@@ -33,7 +33,7 @@
   z-index: 1;
   top: 35%;
   left: 10%;
-  font-size: 3.5rem;
+  font-size: 3.3vw;
   font-weight: 900;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -43,7 +43,7 @@
   z-index: 1;
   top: 43%;
   left: 10%;
-  font-size: 3.5rem;
+  font-size: 3.3vw;
   font-weight: 1000;
   color: rgb(59, 130, 246);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -72,14 +72,14 @@
 .btn-head {
   position: absolute;
   z-index: 1;
-  top: 67%;
+  top: 65%;
   left: 10%;
   background-color: rgb(59, 130, 246);
   color: white;
   padding: 20px 100px;
   border-radius: 5px;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2vw;
   cursor: pointer;
   border: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -315,122 +315,157 @@ button:hover {
   }
 }
 
-
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
   /*//////////////////// header /////////////////*/
-.img-nuage{
-  width: 200%;
-}
-.img-dev{
-display: none;
-}
-.titre-head{
-font-size: 1.7rem;
-left: 5%;
-top: 30%;
-}
-.typeWriter{
-  left: 5%;
-  top: 35%;
-  font-size: 1.5rem;
-  width: 90%;
-}
-.text-head{
-  left: 5%;
-  top: 40%;
-  width: 90%;
-  font-size: 1rem;
-}
-.container-reseaux-head{
-  left: 5%;
-  top: 50%;
-}
-.btn-head{
-  left: 5%;
-  top: 57%;
-  padding: 15px 50px;
-  font-size: 1.2rem;
-}
-/*/////////////// about me  ////////////////*/
+  .img-nuage {
+    width: 200%;
+  }
+  .img-dev {
+    top: 67%;
+    right: 23%;
+    width: 55%;
+    height: auto;
+  }
+  .titre-head {
+    font-size: 1.7rem;
+    left: 5%;
+    top: 30%;
+  }
+  .typeWriter {
+    left: 5%;
+    top: 35%;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .text-head {
+    left: 5%;
+    top: 40%;
+    width: 90%;
+    font-size: 1rem;
+  }
+  .container-reseaux-head {
+    left: 5%;
+    top: 50%;
+  }
+  .btn-head {
+    left: 5%;
+    top: 57%;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+  }
+  /*/////////////// about me  ////////////////*/
 
-.about-me {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-/*/////////////// skills ////////////*/
-.tech-about{
-  gap: 2rem;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  justify-content: center;
-}
-.article-tech-about{
-  width: 8rem;
-  display: flex;
-  flex-direction: row;
-  background-color: #f9fafb;
-  border: solid 1px rgb(187, 187, 187);
-  border-radius: 0.5rem;
-  text-align: start;
-  align-items: center;
-  padding: 4px 5px 4px 5px;
-  cursor: pointer;
-}
-/* /////////////////service/////////////////// */
-.service{
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.container-article-service{
-  display: flex;
-  flex-direction: column;
-}
-.article-service{
-  width: 100%;
-}
-/*//////////////// projets///////////////// */
-.projects{
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.container-projects{
-  padding-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5%;
-}
+  .about-me {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  /*/////////////// skills ////////////*/
+  .tech-about {
+    gap: 2rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+  .article-tech-about {
+    width: 8rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #f9fafb;
+    border: solid 1px rgb(187, 187, 187);
+    border-radius: 0.5rem;
+    text-align: start;
+    align-items: center;
+    padding: 4px 5px 4px 5px;
+    cursor: pointer;
+  }
+  /* /////////////////service/////////////////// */
+  .service {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container-article-service {
+    display: flex;
+    flex-direction: column;
+  }
+  .article-service {
+    width: 100%;
+  }
+  /*//////////////// projets///////////////// */
+  .projects {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container-projects {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
 
-/*///////////// Contact ////////*/
-.contact{
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 7%;
-  padding-top: -20px !important;
-}
-.text-titre-contact {
-  width: 100%;
-}
-.container-contact-all{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.container-form{
-  width: 110%;
-}
-.titre-info-contact {
-  text-align: start;
-}
-.text-info-contact{
-text-align: start;
-}
+  /*///////////// Contact ////////*/
+  .contact {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 7%;
+    padding-top: -20px !important;
+  }
+  .text-titre-contact {
+    width: 100%;
+  }
+  .container-contact-all {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container-form {
+    width: 110%;
+  }
+  .titre-info-contact {
+    text-align: start;
+  }
+  .text-info-contact {
+    text-align: start;
+  }
 
-.social-info-contact{
-  justify-content: start;
+  .social-info-contact {
+    justify-content: start;
+  }
+  .container-info {
+    margin-top: 30px;
+  }
 }
-.container-info{
-  margin-top:30px ;
-}
+@media (min-width: 768px) and (max-width: 1360px) {
+  /*//////////////////// header /////////////////*/
+  .img-nuage {
+    width: 200%;
+    height: 100vw;
+  }
+  .container-reseaux-head {
+    top: 65%;
+  }
+  .btn-head {
+    top: 72%;
+    padding: 15px 50px;
+  }
 
+  /* skill */
+  .tech-about {
+    gap: 2rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+  .article-tech-about {
+    width: 8rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #f9fafb;
+    border: solid 1px rgb(187, 187, 187);
+    border-radius: 0.5rem;
+    text-align: start;
+    align-items: center;
+    padding: 4px 5px 4px 5px;
+    cursor: pointer;
+  }
 }
