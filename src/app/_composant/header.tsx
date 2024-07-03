@@ -3,8 +3,8 @@ import "../../styles/header.css";
 import { useState, useEffect, useRef } from "react";
 import soleil from "../../../public/asset/external-sun-lighting-flaticons-flat-flat-icons.png";
 import lune from "../../../public/asset/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png";
-import nuageClaire from "../../../public/asset/nuageClaire.png";
-import nuageSombre from "../../../public/asset/nuageDark.png";
+import nuageClaire from "../../../public/asset/nuageClaire.svg";
+import nuageSombre from "../../../public/asset/nuageDark.svg";
 import ModalNav from "./modalNav";
 
 

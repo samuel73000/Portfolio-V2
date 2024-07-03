@@ -6,10 +6,10 @@ import Image from "next/image";
 import Projects from "./_composant/project";
 import Contact from "./_composant/contact";
 import Footer from "./_composant/footer";
-import nuageClaire from "../../public/asset/nuageClaire.png";
+import nuageClaire from "../../public/asset/nuageClaire.svg";
 import geek from "../../public/asset/geek.svg";
-import linkedin from "../../public/asset/linkedin--v2.png";
-import github from "../../public/asset/github--v1.png";
+import linkedin from "../../public/asset/linkedin--v2.svg";
+import github from "../../public/asset/github--v1.svg";
 import react from "../../public/asset/tech/react-original-wordmark.svg";
 import redux from "../../public/asset/tech/redux-original.svg";
 import js from "../../public/asset/tech/javascript-original.svg";
@@ -26,10 +26,10 @@ import vite from "../../public/asset/tech/Vitejs-logo.svg.svg";
 import jest from "../../public/asset/tech/jest.svg";
 import serviceLogoFront from "../../public/asset/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png";
 import serviceLogoBack from "../../public/asset/external-backend-no-code-flaticons-flat-flat-icons.png";
-import events from "../../public/asset/projet/77events.png";
-import kasa from "../../public/asset/projet/kasa.png";
-import petitsplats from "../../public/asset/projet/lespetitsplats.png";
-import print from "../../public/asset/projet/print.png";
+import events from "../../public/asset/projet/77events.svg";
+import kasa from "../../public/asset/projet/kasa.svg";
+import petitsplats from "../../public/asset/projet/lespetitsplats.svg";
+import print from "../../public/asset/projet/print.svg";
 
 export default function Home() {
   // on gere les aniamtion quand on passe sur les img geek
