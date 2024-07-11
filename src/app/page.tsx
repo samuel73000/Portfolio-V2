@@ -382,6 +382,15 @@ export default function Home() {
         </p>
         <section className="container-contact-all">
           <article className="container-form">
+
+
+          <form name="contact"  netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    
             <Contact />
           </article>
           <article className="container-info">

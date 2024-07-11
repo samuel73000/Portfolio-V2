@@ -2,6 +2,7 @@ import { Public_Sans } from "next/font/google";
 import "../../styles/contact.css";
 export default function Contact() {
   return (
+   
     <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
       <p>
