@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "./_composant/header";
-const inter = Inter({ subsets: ["latin"] });
-import fav from "../../public/favicon-16x16.png";
-import Contact from "./_composant/contact";
+
+
 
 export default function RootLayout({
   children,
@@ -60,7 +59,6 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        <Contact />
       </body>
     </html>
   );
