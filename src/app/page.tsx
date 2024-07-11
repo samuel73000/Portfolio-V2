@@ -39,7 +39,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4,
+      threshold: 0.4, // Seuil pour img geek 
     };
 
     const callback: IntersectionObserverCallback = (entries) => {
@@ -71,8 +71,8 @@ export default function Home() {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
-      threshold: 1.0, // Seuil pour les articles
+      rootMargin: "200px",
+      threshold: 0.9 // Seuil pour technologies
     };
 
     const callback: IntersectionObserverCallback = (entries) => {
