@@ -2,8 +2,8 @@ import { Public_Sans } from "next/font/google";
 import "../../styles/contact.css";
 export default function Contact() {
   return (
-   
-    <form name="contact" method="POST" data-netlify="true">
+    
+    <form name="contact" method="POST" data-netlify="true"   netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label htmlFor="yourname" className="label">
