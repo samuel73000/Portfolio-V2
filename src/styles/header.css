@@ -71,7 +71,7 @@
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
   .header-container {
-    margin-bottom: -150px;
+    margin-bottom: -350px;
   }
   .nav-header {
     display: none;
