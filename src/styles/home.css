@@ -319,15 +319,17 @@ button:hover {
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
   /*//////////////////// header /////////////////*/
-  /* .img-nuage {
+  .img-nuage {
     height: 100vh;
-    width: 200%;
-  } */
+    max-width: 100%;
+    /* transform: translateY(80px) translateZ(0px); */
+  }
   .img-dev {
-    top: 67%;
+    display: none;
+    /* top: 67%;
     right: 23%;
     width: 55%;
-    height: auto;
+    height: auto; */
   }
   .titre-head {
     font-size: 1.7rem;
