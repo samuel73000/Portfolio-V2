@@ -70,10 +70,6 @@
 
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
-  .header-container {
-  position: absolute;
-  top: 0;
-  }
   .nav-header {
     display: none;
   }
