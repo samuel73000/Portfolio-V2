@@ -442,10 +442,12 @@ button:hover {
 }
 @media (min-width: 768px) and (max-width: 1360px) {
   /*//////////////////// header /////////////////*/
-  /* .img-nuage {
-    width: 200%;
-    height: 100vh;
-  } */
+  .img-nuage {
+    width: 100vw; /* Assure que l'image occupe 100% de la largeur de la fenêtre */
+    height: 75vh; /* Assure que l'image occupe 100% de la hauteur de la fenêtre */
+    object-fit: cover; /* Ajuste l'image pour qu'elle couvre le conteneur */
+    position: relative; /* Nécessaire pour centrer l'image */
+  }
   .container-reseaux-head {
     top: 65%;
   }
