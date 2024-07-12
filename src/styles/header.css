@@ -70,6 +70,9 @@
 
 /* ////////////////////////// responsive ////////////////////////// */
 @media (max-width: 768px) {
+  .header-container {
+    margin-bottom: -150px;
+  }
   .nav-header {
     display: none;
   }
