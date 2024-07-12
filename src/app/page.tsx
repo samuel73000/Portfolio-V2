@@ -69,37 +69,37 @@ export default function Home() {
   const techRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "200px",
-      threshold: 0.9 // Seuil pour technologies
-    };
+    // const options = {
+    //   root: null,
+    //   rootMargin: "200px",
+    //   threshold: 0.9 // Seuil pour technologies
+    // };
 
-    const callback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
-          entry.target.classList.add("animate-up-down");
-        } else {
-          entry.target.classList.remove("animate-up-down");
-        }
-      });
-    };
+    // const callback: IntersectionObserverCallback = (entries) => {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
+    //       entry.target.classList.add("animate-up-down");
+    //     } else {
+    //       entry.target.classList.remove("animate-up-down");
+    //     }
+    //   });
+    // };
 
-    const observer = new IntersectionObserver(callback, options);
+    // const observer = new IntersectionObserver(callback, options);
 
-    techRefs.current.forEach((techRef) => {
-      if (techRef) {
-        observer.observe(techRef);
-      }
-    });
+    // techRefs.current.forEach((techRef) => {
+    //   if (techRef) {
+    //     observer.observe(techRef);
+    //   }
+    // });
 
-    return () => {
-      techRefs.current.forEach((techRef) => {
-        if (techRef) {
-          observer.unobserve(techRef);
-        }
-      });
-    };
+    // return () => {
+    //   techRefs.current.forEach((techRef) => {
+    //     if (techRef) {
+    //       observer.unobserve(techRef);
+    //     }
+    //   });
+    // };
   }, []);
 
   //  data pour les technologies
