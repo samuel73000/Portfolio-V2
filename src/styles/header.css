@@ -69,15 +69,7 @@
 }
 
 /* ////////////////////////// responsive ////////////////////////// */
-@media (min-width: 768px) and (max-width: 1360px) {
-  .header-container {
-    height: 50px;
-  }
-}
 @media (max-width: 768px) {
-  .header-container {
-    height: 50px;
-  }
   .nav-header {
     display: none;
   }

@@ -319,7 +319,7 @@ button:hover {
 @media (max-width: 768px) {
   /*//////////////////// header /////////////////*/
   .img-nuage {
-    width: 200%;
+    width: 100%;
   }
   .img-dev {
     top: 67%;
