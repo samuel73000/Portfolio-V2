@@ -198,7 +198,7 @@ export default function Home() {
             <Typewriter
               words={[
                 "Développeur Front-End",
-                "Freelance spécialisé React.js",
+                "Freelance spécialisé React",
                 "Expert en Next.js",
                 "Spécialiste en TypeScript",
                 "Développeur freelance",
