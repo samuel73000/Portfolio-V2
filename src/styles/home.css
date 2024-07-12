@@ -320,9 +320,10 @@ button:hover {
 @media (max-width: 768px) {
   /*//////////////////// header /////////////////*/
   .img-nuage {
-    height: 100vh;
+    height: auto;
     max-width: 100%;
-    /* transform: translateY(80px) translateZ(0px); */
+    max-height: 100vh; /* Limite la hauteur à la hauteur de la fenêtre */
+    object-fit: cover;
   }
   .img-dev {
     display: none;
