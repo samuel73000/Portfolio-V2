@@ -446,7 +446,7 @@ button:hover {
     width: 100vw; 
     height: 75vh; 
     object-fit: cover; 
-    position: relative; /* Nécessaire pour centrer l'image */
+    position: relative; 
   }
   .container-reseaux-head {
     top: 65%;
