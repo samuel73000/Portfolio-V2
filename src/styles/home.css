@@ -441,7 +441,7 @@ button:hover {
   }
 }
 @media (min-width: 768px) and (max-width: 1360px) {
-  /*////////// header ///////*/
+  /*/////// header ///////*/
   .img-nuage {
     width: 100vw; 
     height: 75vh; 
