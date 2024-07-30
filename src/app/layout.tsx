@@ -14,16 +14,15 @@ export default function RootLayout({
       
 
 
- 
-      
-{/* Google Tag Manager */}
-<Script
-          strategy="afterInteractive" // Charger après le rendu interactif
+    
+        {/* Google Tag Manager */}
+        <Script
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-LSS5Y57MSS"
         />
         <Script
           id="google-analytics"
-          strategy="afterInteractive" // Charger après le rendu interactif
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -34,7 +33,10 @@ export default function RootLayout({
           }}
         />
 
-        
+ 
+      
+
+
 
 
 
