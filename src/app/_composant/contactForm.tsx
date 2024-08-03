@@ -56,7 +56,7 @@ export default function ContactForm() {
 
 
 
-<form name="voucher" data-netlify="true"  method="POST" action="/poukaz-objednan" netlify-honeypot="bot-field">
+<form name="voucher" data-netlify="true"  method="POST"  netlify-honeypot="bot-field">
       <h3>Objednávka voucheru</h3>
       <p className="hidden">
         <label>
