@@ -2,7 +2,6 @@
 import "../styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import { useEffect, useRef } from "react";
-import Head from 'next/head';
 import Image from "next/image";
 import Projects from "./_composant/project";
 import Contact from "./_composant/contactForm";
@@ -180,10 +179,6 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-        <title>Contact Page</title>
-        <meta name="description" content="Contact form page" />
-      </Head>
     <main>
       {/* *********************head*************************** */}
       <section className="head" id="Accueil">
