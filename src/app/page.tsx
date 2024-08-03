@@ -4,7 +4,7 @@ import { Typewriter } from "nextjs-simple-typewriter";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Projects from "./_composant/project";
-import Contact from "./_composant/contact";
+import Contact from "./_composant/contactForm";
 import Footer from "./_composant/footer";
 import nuageClaire from "../../public/asset/nuageClaire.svg";
 import geek from "../../public/asset/geek.svg";
@@ -39,7 +39,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4, // Seuil pour img geek 
+      threshold: 0.4, // Seuil pour img geek
     };
 
     const callback: IntersectionObserverCallback = (entries) => {
@@ -74,7 +74,6 @@ export default function Home() {
     //   rootMargin: "200px",
     //   threshold: 0.9 // Seuil pour technologies
     // };
-
     // const callback: IntersectionObserverCallback = (entries) => {
     //   entries.forEach((entry) => {
     //     if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
@@ -84,15 +83,12 @@ export default function Home() {
     //     }
     //   });
     // };
-
     // const observer = new IntersectionObserver(callback, options);
-
     // techRefs.current.forEach((techRef) => {
     //   if (techRef) {
     //     observer.observe(techRef);
     //   }
     // });
-
     // return () => {
     //   techRefs.current.forEach((techRef) => {
     //     if (techRef) {
@@ -382,9 +378,7 @@ export default function Home() {
         </p>
         <section className="container-contact-all">
           <article className="container-form">
-
             <Contact />
-
           </article>
           <article className="container-info">
             <h3 className="titre-info-contact">email</h3>
