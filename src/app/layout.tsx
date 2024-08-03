@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "./_composant/header";
 import Script from "next/script";
-import Home from "./page/home"
+import Home from "./page"
 
 export default function RootLayout({
   children,
