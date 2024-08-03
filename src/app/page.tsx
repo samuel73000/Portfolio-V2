@@ -2,6 +2,7 @@
 import "../styles/home.css";
 import { Typewriter } from "nextjs-simple-typewriter";
 import { useEffect, useRef } from "react";
+import Head from 'next/head';
 import Image from "next/image";
 import Projects from "./_composant/project";
 import Contact from "./_composant/contactForm";
@@ -178,6 +179,11 @@ export default function Home() {
   };
 
   return (
+    <>
+    <Head>
+        <title>Contact Page</title>
+        <meta name="description" content="Contact form page" />
+      </Head>
     <main>
       {/* *********************head*************************** */}
       <section className="head" id="Accueil">
@@ -386,56 +392,11 @@ export default function Home() {
 
 
 
-          <form name="contact" method="POST" data-netlify="true"   netlify-honeypot="bot-field" >
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label htmlFor="yourname" className="label">
-          Nom:
-        </label>{" "}
-        <br />
-        <input
-          type="text"
-          name="name"
-          id="yourname"
-          className="input"
-          placeholder="Entrez votre nom"
-        />
-      </p>
-      <p>
-        <label htmlFor="youremail" className="label">
-          Email:
-        </label>{" "}
-        <br />
-        <input
-          type="email"
-          name="email"
-          id="youremail"
-          className="input"
-          placeholder="Entrez votre email"
-        />
-      </p>
-      <p>
-        <label htmlFor="yourmessage" className="label">
-          Message:
-        </label>{" "}
-        <br />
-        <textarea
-          name="message"
-          id="yourmessage"
-          className="input-message"
-          placeholder="Entrez votre message"
-        ></textarea>
-      </p>
-      <p className="container-btn-submit">
-        <button type="submit" className="submit-form">
-          Envoyer
-        </button>
-      </p>
-    </form>
+          
 
 
 
-            {/* <Contact /> */}
+            <Contact />
 
 
 
@@ -469,5 +430,6 @@ export default function Home() {
         <Footer />
       </section>
     </main>
+    </>
   );
 }
