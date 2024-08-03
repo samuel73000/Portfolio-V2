@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "./_composant/header";
 import Script from "next/script";
-
+import Home from "./page/home"
 
 export default function RootLayout({
   children,
@@ -75,7 +75,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        {children}
+        <Home />
       </body>
     </html>
   );
