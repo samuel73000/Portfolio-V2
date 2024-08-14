@@ -28,7 +28,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <meta name="robots" content="index"/>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
@@ -58,10 +57,10 @@ export default function RootLayout({
           property="og:description"
           content="Freelance développeur front-end spécialisé en React, Samuel Pouard. Expert dans la création de sites web sur mesure. Contactez-moi pour vos projets de développement web."
         />
-        <meta
+        {/* <meta
           name="robots"
           content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-        />
+        /> */}
         <meta http-equiv="Content-Language" content="fr" />
         <link rel="canonical" href="https://pouardsamuel.fr/" />
         <meta name="author" content="Samuel Pouard" />
