@@ -1,0 +1,738 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/header.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.header-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+.titre-header {
+  font-size: 1.2rem;
+  margin-left: 3%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.header-btn-mobile {
+  display: none;
+}
+
+.nav-header {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  right: 8%;
+  gap: 2rem;
+}
+
+.nav-header-a {
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.nav-header-a:hover {
+  background-color: rgb(59, 130, 246);
+  color: white;
+}
+.active-a {
+  background-color: rgb(59, 130, 246);
+  color: white;
+}
+
+/* dark */
+.header-dark {
+  background-color: #374151;
+}
+.titre-header-dark {
+  color: white !important;
+}
+.header-img-darkmode {
+  position: absolute;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.about-me-dark {
+  background-color: #111827;
+}
+.service-dark {
+  background-color: #000000 !important;
+}
+
+/* ////////////////////////// responsive ////////////////////////// */
+@media (max-width: 768px) {
+  .nav-header {
+    display: none;
+  }
+  .header-btn-mobile {
+    display: block;
+    position: absolute;
+    right: 5%;
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+  }
+  .nohover:hover {
+    background-color: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .header-btn-mobile-dark {
+    background-color: #374151;
+    color: white;
+  }
+  .header-img-darkmode {
+    position: absolute;
+    right: 15%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .container-nav-mobile {
+    position: fixed; 
+    right: 2%;
+    top: 9%; /* Ajustez selon le besoin */
+    z-index: 9999; /* Assurez-vous que ce z-index est très élevé */
+    border-radius: 25px;
+    padding: 10px; /* Ajout de padding pour le contenu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel : ajouter une ombre */
+    overflow: hidden;
+    background-color: white;
+  }
+ 
+  .nav-header-a {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/home.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* ////////////////////////// head ////////////////////////// */
+.head {
+  position: relative;
+width: 100%;
+  height: 100%;
+}
+.img-nuage {
+  max-width: 100%;
+  height: auto;
+  /* transform: translateY(80px) translateZ(0px); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.img-dev {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  right: 14%;
+  width: 35%;
+  height: auto;
+}
+
+.titre-head {
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 10%;
+  font-size: 3.3vw;
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.typeWriter {
+  position: absolute;
+  z-index: 1;
+  top: 43%;
+  left: 10%;
+  font-size: 3.3vw;
+  font-weight: 1000;
+  color: rgb(59, 130, 246);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.text-head {
+  position: absolute;
+  z-index: 1;
+  top: 52%;
+  left: 10%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 40%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.container-reseaux-head {
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  left: 10%;
+  width: 40%;
+  display: flex;
+  gap: 20px;
+}
+.btn-head {
+  position: absolute;
+  z-index: 1;
+  top: 65%;
+  left: 10%;
+  background-color: rgb(59, 130, 246);
+  color: white;
+  padding: 20px 100px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.2vw;
+  cursor: pointer;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ////////////////////////// about me ////////////////////////// */
+.about-me {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.titre-about {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.titre-article-about {
+  font-size: 1.7rem;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  color: rgb(59, 130, 246);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.text-article-about {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(107 114 128);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.tech-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.article-tech-about {
+  width: 9rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #f9fafb;
+  border: solid 1px rgb(187, 187, 187);
+  border-radius: 0.5rem;
+  text-align: start;
+  align-items: center;
+  padding: 8px 10px 8px 10px;
+  cursor: pointer;
+}
+.image-tech-about {
+  width: 3rem;
+  height: auto;
+}
+.text-tech-about {
+  font-size: 16px;
+  margin-left: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ////////////////////////// service ////////////////////////// */
+.service {
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: #f3f4f6;
+}
+.container-article-service {
+  display: flex;
+  gap: 6%;
+  justify-content: center;
+}
+.article-service {
+  padding: 10px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  width: 45%;
+  margin-bottom: 70px;
+  border-radius: 20px;
+}
+
+.title-article-service {
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 15px;
+}
+.text-artcile-service {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+/* ////////////////////////// project ////////////////////////// */
+.projects {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 50px;
+}
+.container-projects {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.container-btn-projects {
+  display: flex;
+  justify-content: center;
+}
+.btn-projects-show {
+  margin-top: 15px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 30px 15px 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+/* ////////////////////////// contacte ////////////////////////// */
+.contact {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 7%;
+  background-color: #f3f4f6;
+  padding-top: -20px !important;
+}
+.text-titre-contact {
+  color: #6b7280;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  width: 50%;
+}
+.container-contact-all {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.container-form {
+  width: 50%;
+}
+.titre-info-contact {
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-align: end;
+}
+.text-info-contact {
+  color: #1d4ed8;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  text-align: end;
+  margin-bottom: 20px;
+}
+.social-info-contact {
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+}
+/* ////////////////////////// footer ////////////////////////// */
+
+.footer {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* ////////////////////////// animation ////////////////////////// */
+/* aniamtion des btn */
+button:hover {
+  background-color: #4669ca;
+}
+/* animation des logo des reseaux */
+.logo-github,
+.logo-linkedin {
+  padding-right: 2px;
+  transition: transform 0.3s ease;
+}
+.logo-github:hover,
+.logo-linkedin:hover {
+  transform: scale(1.1);
+}
+
+/* animation img de geek */
+.animate-up-down {
+  animation-name: fade-in-slide-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.apparition-service {
+  animation-name: apparition-service;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apparition-service {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ////////////////////////// responsive ////////////////////////// */
+@media (max-width: 768px) {
+  /*//////////////////// header /////////////////*/
+  .img-nuage {
+    width: 100vw; /* Assure que l'image occupe 100% de la largeur de la fenêtre */
+    height: 100vh; /* Assure que l'image occupe 100% de la hauteur de la fenêtre */
+    object-fit: cover; /* Ajuste l'image pour qu'elle couvre le conteneur */
+    position: relative; /* Nécessaire pour centrer l'image */
+  }
+  .img-dev {
+    display: none;
+    /* top: 67%;
+    right: 23%;
+    width: 55%;
+    height: auto; */
+  }
+  .titre-head {
+    font-size: 1.7rem;
+    left: 5%;
+    top: 30%;
+  }
+  .typeWriter {
+    left: 5%;
+    top: 35%;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .text-head {
+    left: 5%;
+    top: 40%;
+    width: 90%;
+    font-size: 1rem;
+  }
+  .container-reseaux-head {
+    left: 5%;
+    top: 50%;
+  }
+  .btn-head {
+    left: 5%;
+    top: 57%;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+  }
+  /*/////////////// about me  ////////////////*/
+
+  .about-me {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  /*/////////////// skills ////////////*/
+  .tech-about {
+    gap: 2rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+  .article-tech-about {
+    width: 8rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #f9fafb;
+    border: solid 1px rgb(187, 187, 187);
+    border-radius: 0.5rem;
+    text-align: start;
+    align-items: center;
+    padding: 4px 5px 4px 5px;
+    cursor: pointer;
+  }
+  /* /////////////////service/////////////////// */
+  .service {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container-article-service {
+    display: flex;
+    flex-direction: column;
+  }
+  .article-service {
+    width: 95%;
+  }
+  /*//////////////// projets///////////////// */
+  .projects {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container-projects {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+
+  /*///////////// Contact ////////*/
+  .contact {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 7%;
+    padding-top: -20px !important;
+  }
+  .text-titre-contact {
+    width: 100%;
+  }
+  .container-contact-all {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container-form {
+    width: 110%;
+  }
+  .titre-info-contact {
+    text-align: start;
+  }
+  .text-info-contact {
+    text-align: start;
+  }
+
+  .social-info-contact {
+    justify-content: start;
+  }
+  .container-info {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1360px) {
+  /*/////// header ///////*/
+  .img-nuage {
+    width: 100vw; 
+    height: 75vh; 
+    object-fit: cover; 
+    position: relative; 
+  }
+  .container-reseaux-head {
+    top: 65%;
+  }
+  .btn-head {
+    top: 72%;
+    padding: 15px 50px;
+  }
+
+  /* skill */
+  .tech-about {
+    gap: 2rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+  .article-tech-about {
+    width: 8rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #f9fafb;
+    border: solid 1px rgb(187, 187, 187);
+    border-radius: 0.5rem;
+    text-align: start;
+    align-items: center;
+    padding: 4px 5px 4px 5px;
+    cursor: pointer;
+  }
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/projects.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.section-projects {
+  width: 47%;
+  height: auto;
+  margin-bottom: 5%;
+}
+.img-projets {
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container-texte-projects {
+  background-color: #1f2937;
+  margin-top: -10px;
+  padding: 20px;
+  z-index: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  border-radius: 0 0 10px 10px;
+}
+.titre-projects {
+  font-size: 24px;
+  color: white;
+}
+.texte-projects {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #9ca3af;
+}
+.btn-projects {
+  margin-top: 15px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+ /* responsive */
+ @media (max-width: 768px){
+  .section-projects {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+ }
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/contact.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.label {
+  color: #111827;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+.input {
+  width: 80%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #374151;
+  color: white;
+}
+.input-message {
+  width: 80%;
+  height: 112px;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #374151;
+  color: white;
+}
+::placeholder {
+  color: #c3c7ce;
+}
+.container-btn-submit {
+  margin-top: 20px;
+}
+.submit-form {
+  background-color: #3b82f6;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 15px 10px 15px;
+  color: white;
+  border: none;
+  width: 20%;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* ////////////////////////// responsive ////////////////////////// */
+@media (max-width: 768px) {
+  .submit-form {
+   width: 30%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1360px) {
+  .submit-form {
+    width: 30%;
+   }
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/footer.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+

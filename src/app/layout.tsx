@@ -76,10 +76,10 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        {/* <Home /> */}
+        <Home />
 
         
-        {children}
+        {/* {children} */}
       </body>
     </html>
   );
