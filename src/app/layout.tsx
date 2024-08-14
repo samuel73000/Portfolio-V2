@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 import Header from "./_composant/header";
 import Script from "next/script";
-import Home from "./page/page"
+
+
 
 export default function RootLayout({
   children,
@@ -57,10 +58,10 @@ export default function RootLayout({
           property="og:description"
           content="Freelance développeur front-end spécialisé en React, Samuel Pouard. Expert dans la création de sites web sur mesure. Contactez-moi pour vos projets de développement web."
         />
-        {/* <meta
+        <meta
           name="robots"
           content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-        /> */}
+        />
         <meta http-equiv="Content-Language" content="fr" />
         <link rel="canonical" href="https://pouardsamuel.fr/" />
         <meta name="author" content="Samuel Pouard" />
@@ -75,15 +76,8 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <Home />
-
-        
-        {/* {children} */}
+        {children}
       </body>
     </html>
   );
 }
-
-
-
-
