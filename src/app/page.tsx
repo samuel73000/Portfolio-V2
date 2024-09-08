@@ -183,6 +183,7 @@ export default function Home() {
 
   return (
     <main>
+      
       {/* *********************head*************************** */}
       <section className="head" id="Accueil">
         <Image src={nuageClaire} alt="nuage" className="img-nuage" />
