@@ -11,6 +11,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: cover;
 }
 .container-texte-projects {
   background-color: #1f2937;

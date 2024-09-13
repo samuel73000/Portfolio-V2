@@ -10,16 +10,17 @@
   height: 100%;
 }
 .img-nuage {
-  max-width: 100%;
+ max-width: 100%;
+ width: 100vw;
   height: auto;
-  /* transform: translateY(80px) translateZ(0px); */
+  transform: translateY(80px) translateZ(0px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   top: 0;
   left: 0;
   z-index: 0;
-  overflow-y: hidden; 
+  overflow-y: hidden;  
 }
 .img-dev {
   position: absolute;
