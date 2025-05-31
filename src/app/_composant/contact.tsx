@@ -1,54 +1,70 @@
 import { Public_Sans } from "next/font/google";
 import "../../styles/contact.css";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { useState } from "react";
 export default function Contact() {
+  const [open, setOpen] = useState(false);
   return (
-    
-    <form name="contact" method="POST" data-netlify="true"   netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label htmlFor="yourname" className="label">
-          Nom:
-        </label>{" "}
-        <br />
-        <input
-          type="text"
-          name="name"
-          id="yourname"
-          className="input"
-          placeholder="Entrez votre nom"
-        />
-      </p>
-      <p>
-        <label htmlFor="youremail" className="label">
-          Email:
-        </label>{" "}
-        <br />
-        <input
-          type="email"
-          name="email"
-          id="youremail"
-          className="input"
-          placeholder="Entrez votre email"
-        />
-      </p>
-      <p>
-        <label htmlFor="yourmessage" className="label">
-          Message:
-        </label>{" "}
-        <br />
-        <textarea
-          name="message"
-          id="yourmessage"
-          className="input-message"
-          placeholder="Entrez votre message"
-        ></textarea>
-      </p>
-      <p className="container-btn-submit">
-        <button type="submit" className="submit-form">
-          Envoyer
-        </button>
-      </p>
-    </form>
-  );
+    <section>
+      <Button
+        className='contact-button'
+        variant='contained'
+        onClick={() => setOpen(!open)}
+        sx={{
+          marginTop: "100px",
+          marginBottom: "100px",
+        }}>
+        {open ? "Fermer le formulaire" : "Me contacter"}
+      </Button>
 
+      <form
+        name='contact'
+        method='POST'
+        data-netlify='true'
+        className={open ? "form-visible" : "form-hidden"}>
+        {/* Nécessaire pour le parsing du formulaire par Netlify */}
+        <input type='hidden' name='form-name' value='contact' />
+
+        <TextField
+          type='text'
+          label='Votre nom'
+          name='name'
+          fullWidth
+          margin='normal'
+        />
+
+        <TextField
+          label='Votre email'
+          name='email'
+          type='email'
+          fullWidth
+          margin='normal'
+        />
+
+        <TextField
+          type='text'
+          label='Votre message'
+          name='message'
+          multiline
+          rows={4}
+          fullWidth
+          margin='normal'
+        />
+
+        <Button
+          type='submit'
+          variant='outlined'
+          sx={{
+            marginTop: "1rem",
+
+            "&:hover": {
+              backgroundColor: "rgba(122, 70, 177, 0.1)",
+            },
+          }}>
+          Envoyer
+        </Button>
+      </form>
+    </section>
+  );
 }
