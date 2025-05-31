@@ -366,7 +366,7 @@ export default function Home() {
       </section>
       {/* **********************contacte********************************** */}
       <section className='contact' id='Contact'>
-        <h2 className='titre-about'>Contact</h2>
+        <h2 className='titre-article-about-contact'>Contact</h2>
           <article className='container-form'>
             <h3 className='titre-article-about'>Connectez-vous avec moi</h3>
         <p className='text-titre-contact'>
