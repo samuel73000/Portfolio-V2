@@ -39,7 +39,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4, // Seuil pour img geek 
+      threshold: 0.4, // Seuil pour img geek
     };
 
     const callback: IntersectionObserverCallback = (entries) => {
@@ -74,7 +74,6 @@ export default function Home() {
     //   rootMargin: "200px",
     //   threshold: 0.9 // Seuil pour technologies
     // };
-
     // const callback: IntersectionObserverCallback = (entries) => {
     //   entries.forEach((entry) => {
     //     if (entry.isIntersecting && entry.intersectionRatio >= 1.0) {
@@ -84,15 +83,12 @@ export default function Home() {
     //     }
     //   });
     // };
-
     // const observer = new IntersectionObserver(callback, options);
-
     // techRefs.current.forEach((techRef) => {
     //   if (techRef) {
     //     observer.observe(techRef);
     //   }
     // });
-
     // return () => {
     //   techRefs.current.forEach((techRef) => {
     //     if (techRef) {
@@ -183,19 +179,18 @@ export default function Home() {
 
   return (
     <main>
-      
       {/* ***************head***************** */}
-      <section className="head" id="Accueil">
-        <Image src={nuageClaire} alt="nuage" className="img-nuage" />
+      <section className='head' id='Accueil'>
+        <Image src={nuageClaire} alt='nuage' className='img-nuage' />
         <Image
           src={geek}
-          alt="un geek qui dev"
-          className="img-dev"
+          alt='un geek qui dev'
+          className='img-dev'
           ref={geekImageRef}
         />
         <div>
-          <h2 className="titre-head">Salut, moi c'est Samuel</h2>
-          <div className="typeWriter">
+          <h2 className='titre-head'>Salut, moi c'est Samuel</h2>
+          <div className='typeWriter'>
             <Typewriter
               words={[
                 "Développeur Front-End",
@@ -206,40 +201,40 @@ export default function Home() {
               ]}
               loop={50}
               cursor
-              cursorStyle="_"
+              cursorStyle='_'
               typeSpeed={70}
               deleteSpeed={50}
               delaySpeed={1000}
             />
           </div>
-          <p className="text-head">
+          <p className='text-head'>
             Je suis un développeur freelance spécialisé en React.js et Next.js,
             avec 2 ans d'expérience dans le domaine du développement web.
           </p>
-          <div className="container-reseaux-head">
-            <a href="https://www.linkedin.com/in/samuel-pouard/">
+          <div className='container-reseaux-head'>
+            <a href='https://www.linkedin.com/in/samuel-pouard/'>
               <Image
                 src={linkedin}
-                alt="logo linkedin"
-                className="logo-linkedin"
+                alt='logo linkedin'
+                className='logo-linkedin'
               />
             </a>
-            <a href="https://github.com/samuel73000">
-              <Image src={github} alt="logo github" className="logo-github" />
+            <a href='https://github.com/samuel73000'>
+              <Image src={github} alt='logo github' className='logo-github' />
             </a>
           </div>
 
-          <button className="btn-head" onClick={handleDownload}>
+          <button className='btn-head' onClick={handleDownload}>
             Télécharger CV
           </button>
         </div>
       </section>
       {/* **********************about me******************** */}
-      <section className="about-me" id="Présentation">
-        <h2 className="titre-about">À propos de moi</h2>
-        <article className="article-about">
-          <h3 className="titre-article-about">En savoir plus sur moi</h3>
-          <p className="text-article-about">
+      <section className='about-me' id='Présentation'>
+        <h2 className='titre-about'>À propos de moi</h2>
+        <article className='article-about'>
+          <h3 className='titre-article-about'>En savoir plus sur moi</h3>
+          <p className='text-article-about'>
             Je suis un développeur web autodidacte et développeur d'applications
             mobiles, passionné par la création de nouvelles fonctionnalités, de
             la conception à la production. J'apporte une attention particulière
@@ -249,57 +244,55 @@ export default function Home() {
             j'accompagne de la conception initiale jusqu'à la sortie
           </p>
         </article>
-        <article className="article-about">
-          <h3 className="titre-article-about">Technologies et Outils</h3>
-          <p className="text-article-about">
+        <article className='article-about'>
+          <h3 className='titre-article-about'>Technologies et Outils</h3>
+          <p className='text-article-about'>
             En utilisant une combinaison de technologies de pointe et de
             logiciels open-source fiables, je développe des applications et des
             sites web performants et centrés sur l'utilisateur pour smartphones,
             tablettes et ordinateurs de bureau.
           </p>
         </article>
-        <div className="tech-about">
+        <div className='tech-about'>
           {techSrc.map((tech, index) => (
             <article
               key={index}
-              className="article-tech-about"
+              className='article-tech-about'
               ref={(el) => {
                 if (el) {
                   techRefs.current[index] = el as HTMLDivElement;
                 }
-              }}
-            >
+              }}>
               <Image
                 src={tech}
                 alt={`logo ${nameTech[index]}`}
-                className="image-tech-about"
+                className='image-tech-about'
               />
-              <p className="text-tech-about">{nameTech[index]}</p>
+              <p className='text-tech-about'>{nameTech[index]}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* **********************service******************** */}
-      <section className="service" id="Services">
-        <h2 className="titre-about">Services </h2>
-        <h3 className="titre-article-about">Ce que je propose</h3>
-        <div className="container-article-service">
+      <section className='service' id='Services'>
+        <h2 className='titre-about'>Services </h2>
+        <h3 className='titre-article-about'>Ce que je propose</h3>
+        <div className='container-article-service'>
           <article
-            className="article-service"
+            className='article-service'
             ref={(el) => {
               if (el) serviceRefs.current.push(el as HTMLDivElement);
-            }}
-          >
+            }}>
             <Image
               src={serviceLogoFront}
-              alt="service logo"
-              className="img-service"
+              alt='service logo'
+              className='img-service'
             />
-            <h4 className="title-article-service">
+            <h4 className='title-article-service'>
               Développement d'Applications Web
             </h4>
-            <p className="text-artcile-service">
+            <p className='text-artcile-service'>
               Je mets en œuvre une variété de technologies modernes et de
               logiciels open-source fiables pour créer des applications web
               performantes et orientées utilisateur. Mon approche inclut la
@@ -309,18 +302,17 @@ export default function Home() {
             </p>
           </article>
           <article
-            className="article-service"
+            className='article-service'
             ref={(el) => {
               if (el) serviceRefs.current.push(el as HTMLDivElement);
-            }}
-          >
+            }}>
             <Image
               src={serviceLogoBack}
-              alt="service logo"
-              className="img-service"
+              alt='service logo'
+              className='img-service'
             />
-            <h4 className="title-article-service">Conception Web</h4>
-            <p className="text-artcile-service">
+            <h4 className='title-article-service'>Conception Web</h4>
+            <p className='text-artcile-service'>
               La conception web est bien plus qu'une simple esthétique : elle
               allie créativité et fonctionnalité pour offrir des expériences
               utilisateur exceptionnelles. En utilisant une approche centrée sur
@@ -332,40 +324,40 @@ export default function Home() {
         </div>
       </section>
       {/* **********************project********************************** */}
-      <section className="projects" id="Projets">
-        <h2 className="titre-about">Projets</h2>
-        <h3 className="titre-article-about">Réalisations antérieures</h3>
-        <div className="container-projects">
+      <section className='projects' id='Projets'>
+        <h2 className='titre-about'>Projets</h2>
+        <h3 className='titre-article-about'>Réalisations antérieures</h3>
+        <div className='container-projects'>
           <Projects
             src={events}
             alt="screen de l'application 77events"
-            titre="77 events"
+            titre='77 events'
             texte="Site d'une agence événementielle développé en React.js et CSS."
-            lien="https://724events-6.netlify.app/"
+            lien='https://724events-6.netlify.app/'
           />
 
           <Projects
             src={kasa}
             alt="screen de l'application kasa"
-            titre="Kasa"
-            texte="Plateforme de réservation de logements réalisée avec React, Redux et Ts."
-            lien="https://kasa-4.netlify.app/"
+            titre='Kasa'
+            texte='Plateforme de réservation de logements réalisée avec React, Redux et Ts.'
+            lien='https://kasa-4.netlify.app/'
           />
 
           <Projects
             src={petitsplats}
             alt="screen de l'application les petits plats"
-            titre="Les petits plats"
-            texte="Site de recettes variées conçu en JavaScript, HTML et CSS."
-            lien="https://les-petits-plats-sp.netlify.app/"
+            titre='Les petits plats'
+            texte='Site de recettes variées conçu en JavaScript, HTML et CSS.'
+            lien='https://les-petits-plats-sp.netlify.app/'
           />
 
           <Projects
             src={print}
             alt="screen de l'application print"
-            titre="Print it"
+            titre='Print it'
             texte="Plateforme d'une agence d'impression créée avec JavaScript, HTML et CSS."
-            lien="https://print-it-3.netlify.app/"
+            lien='https://print-it-3.netlify.app/'
           />
         </div>
         {/* <div className="container-btn-projects">
@@ -373,48 +365,20 @@ export default function Home() {
         </div> */}
       </section>
       {/* **********************contacte********************************** */}
-      <section className="contact" id="Contact">
-        <h2 className="titre-about">Contact</h2>
-        <h3 className="titre-article-about">Connectez-vous avec moi</h3>
-        <p className="text-titre-contact">
+      <section className='contact' id='Contact'>
+        <h2 className='titre-about'>Contact</h2>
+          <article className='container-form'>
+            <h3 className='titre-article-about'>Connectez-vous avec moi</h3>
+        <p className='text-titre-contact'>
           Si vous souhaitez en savoir plus sur moi ou sur mon travail, ou si
           vous souhaitez simplement dire bonjour, envoyez-moi un message.
           J'adorerais avoir de vos nouvelles.
         </p>
-        <section className="container-contact-all">
-          <article className="container-form">
-
-
-         
-
-
             <Contact />
           </article>
-          <article className="container-info">
-            <h3 className="titre-info-contact">email</h3>
-            <p className="text-info-contact">thosam73000@gmail.com</p>
-            <h3 className="titre-info-contact">Adresse</h3>
-            <p className="text-info-contact">
-              101 avenue d'annecy, Lyon, France
-            </p>
-            <h3 className="titre-info-contact">sociale</h3>
-            <div className="social-info-contact">
-              <a href="https://www.linkedin.com/in/samuel-pouard/">
-                <Image
-                  src={linkedin}
-                  alt="logo linkedin"
-                  className="logo-linkedin"
-                />
-              </a>
-              <a href="https://github.com/samuel73000">
-                <Image src={github} alt="logo github" className="logo-github" />
-              </a>
-            </div>
-          </article>
-        </section>
       </section>
       {/* **********************footer********************************** */}
-      <section className="footer">
+      <section className='footer'>
         <Footer />
       </section>
     </main>
