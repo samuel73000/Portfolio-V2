@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Projects from "./_composant/project";
 import Contact from "./_composant/contact";
-import Footer from "./_composant/footer";
 import nuageClaire from "../../public/asset/nuageClaire.svg";
 import geek from "../../public/asset/geek.svg";
 import linkedin from "../../public/asset/linkedin--v2.svg";
@@ -364,7 +363,7 @@ export default function Home() {
           <button className="btn-projects-show">Voir plus</button>
         </div> */}
       </section>
-      {/* **********************contacte********************************** */}
+      {/* **********************contact********************************** */}
       <section className='contact' id='Contact'>
         <h2 className='titre-article-about-contact'>Contact</h2>
           <article className='container-form'>
@@ -376,10 +375,6 @@ export default function Home() {
         </p>
             <Contact />
           </article>
-      </section>
-      {/* **********************footer********************************** */}
-      <section className='footer'>
-        <Footer />
       </section>
     </main>
   );
